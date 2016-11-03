@@ -1,0 +1,1712 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="shortcut icon" href="http://10.3.150.1/clinica/imagenes/o24.ico"><link rel="stylesheet" type="text/css"  href="../estilo/nblue/estilo.css" >
+  <title>Gestión Administrativa de Ingresos</title>
+</head>
+<body id="proceso" onload="ocultaCarga();">
+
+    <script type="text/javascript">
+
+    function ocultaCarga()
+    {
+      document.getElementById("loading").style.display="none";
+    }
+      if (document.addEventListener) document.addEventListener("DOMContentLoaded", ocultaCarga, null);
+      else window.onload = ocultaCarga;
+        </script>
+    <table id="loading" class="carga_tabla1"><tr><td align="center"><table class="carga_tabla2"><tr><td></td></tr></table></td></tr></table>
+<script type="text/javascript">
+var server_path           = 'http://10.3.150.1/clinica/';
+var estilo_actual         = 'nblue';
+var t_msg_error         = new Array();
+var t_msg_unico         = new Array();
+var aventanas                 = new Array();
+var abmaestros                = new Array();
+</script>
+
+<script type="text/javascript" src="http://10.3.150.1/clinica/herramientas/utiles/javascript/utiles.js?aaee574534aXXFFgg00mmmmm3123"></script>
+<script type="text/javascript" src="http://10.3.150.1/clinica/herramientas/fckeditor/javascript/fckeditor.js?aaee574534aXXFFgg00mmmmm3123"></script>
+<script type="text/javascript" src="http://10.3.150.1/clinica/herramientas/formulario/javascript/formulario.js?aaee574534aXXFFgg00mmmmm3123"></script>
+<script type="text/javascript" src="http://10.3.150.1/clinica/herramientas/formulario2/javascript/formulario2.js?aaee574534aXXFFgg00mmmmm3123"></script>
+<script type="text/javascript" src="http://10.3.150.1/clinica/herramientas/forma/javascript/forma.js?aaee574534aXXFFgg00mmmmm3123"></script>
+<script type="text/javascript" src="http://10.3.150.1/clinica/herramientas/auto_tabla/javascript/auto_tabla.js?aaee574534aXXFFgg00mmmmm3123"></script>
+<script type="text/javascript" src="http://10.3.150.1/clinica/herramientas/submodal/javascript/submodal.js?aaee574534aXXFFgg00mmmmm3123"></script>
+<script type="text/javascript" src="http://10.3.150.1/clinica/herramientas/impresora/javascript/impresora.js?aaee574534aXXFFgg00mmmmm3123"></script>
+<script type="text/javascript" src="http://10.3.150.1/clinica/herramientas/popup/javascript/popup.js?aaee574534aXXFFgg00mmmmm3123"></script>
+<script type="text/javascript" src="http://10.3.150.1/clinica/herramientas/clave/javascript/clave.js?aaee574534aXXFFgg00mmmmm3123"></script>
+<script type="text/javascript" src="http://10.3.150.1/clinica/herramientas/password/javascript/password.js?aaee574534aXXFFgg00mmmmm3123"></script>
+<script type="text/javascript" src="http://10.3.150.1/clinica/herramientas/autorizacion/javascript/autorizacion.js?aaee574534aXXFFgg00mmmmm3123"></script>
+
+<table width="100%" height="100%" border="0">
+<tr>
+<td align="center" valign="middle" >
+<div class="grid_contenedor" id="modulo" style="width:983px; height:740px;">
+<div>
+<div class="grid_esquina1"></div>
+<div class="grid_esquina"></div>
+<div class="grid_esquina2"></div>
+<div class="grid_barra_titulo">
+<div class="grid_titulo">Gestión Administrativa de Ingresos</div>
+<div class="grid_controls_right"></div>
+<div class="grid_controles">
+<span onclick="ayuda(1)" class="grid_ayuda"></span>
+<span onclick="parent.proceso.location.href='../main/inicio.php' " class="grid_cerrar"></span>
+</div>
+<div class="grid_controls_left"></div>
+</div>
+</div>
+<div class="grid_cuadro" style="width:100%;padding:0px"  >
+
+<div id="contenido">
+<table border="0" cellspacing="0" cellpadding="0" bgcolor="#DDDDDD">
+<tr>
+			<span style="cursor:pointer;" onclick="Switch('E')"><input id="item1" name="modalidad" type="radio"> Emergencia</span>
+			<span style="cursor:pointer;" onclick="Switch('H')"><input id="item2" name="modalidad" type="radio"> Hospitalización</span>
+			<span style="cursor:pointer;" onclick="Switch('TODOS')"><input id="item3" name="modalidad" type="radio" checked> Todos</span>
+      <td id="GRUPO1" style="padding:0px; border-top: 3px solid #466BB2; border-bottom: 3px solid #466BB2;"></td>
+</tr>
+</table>
+</div>
+
+</div>
+<div class="grid_leyenda">
+<table class="tabla_leyenda">
+<tr>
+<table class="tabla_leyenda">
+<tr>
+ <td id="LEYENDA1" onselectstart="return false;" style="width:75px"; class="td_leyenda_inactiva" onmouseup="this.className='td_leyenda_activa'" onmouseover="this.className='td_leyenda_activa'" onmousedown="this.className='td_leyenda_click'" onmouseout="this.className='td_leyenda_inactiva'">[<B>INS</B>]<br>Ingreso</td>
+ <td id="LEYENDA2" onselectstart="return false;" style="width:75px"; class="td_leyenda_inactiva" onmouseup="this.className='td_leyenda_activa'" onmouseover="this.className='td_leyenda_activa'" onmousedown="this.className='td_leyenda_click'" onmouseout="this.className='td_leyenda_inactiva'">[<B>ENTER</B>]<br>Modificar</td>
+ <td id="LEYENDA3" onselectstart="return false;" style="width:75px"; class="td_leyenda_inactiva" onmouseup="this.className='td_leyenda_activa'" onmouseover="this.className='td_leyenda_activa'" onmousedown="this.className='td_leyenda_click'" onmouseout="this.className='td_leyenda_inactiva'">[<B>F2</B>]<br>Listar Documentos</td>
+ <td id="LEYENDA4" onselectstart="return false;" style="width:75px"; class="td_leyenda_inactiva" onmouseup="this.className='td_leyenda_activa'" onmouseover="this.className='td_leyenda_activa'" onmousedown="this.className='td_leyenda_click'" onmouseout="this.className='td_leyenda_inactiva'">[<B>F3</B>]<br>Consultar</td>
+ <td id="LEYENDA5" onselectstart="return false;" style="width:75px"; class="td_leyenda_inactiva" onmouseup="this.className='td_leyenda_activa'" onmouseover="this.className='td_leyenda_activa'" onmousedown="this.className='td_leyenda_click'" onmouseout="this.className='td_leyenda_inactiva'">[<B>F4</B>]<br>Ver Detalle</td>
+ <td id="LEYENDA6" onselectstart="return false;" style="width:75px"; class="td_leyenda_inactiva" onmouseup="this.className='td_leyenda_activa'" onmouseover="this.className='td_leyenda_activa'" onmousedown="this.className='td_leyenda_click'" onmouseout="this.className='td_leyenda_inactiva'">[<B>F6</B>]<br>Recaudos</td>
+ <td id="LEYENDA7" onselectstart="return false;" style="width:75px"; class="td_leyenda_inactiva" onmouseup="this.className='td_leyenda_activa'" onmouseover="this.className='td_leyenda_activa'" onmousedown="this.className='td_leyenda_click'" onmouseout="this.className='td_leyenda_inactiva'">[<B>F7</B>]<br>Cambiar Orden</td>
+ <td id="LEYENDA8" onselectstart="return false;" style="width:75px"; class="td_leyenda_inactiva" onmouseup="this.className='td_leyenda_activa'" onmouseover="this.className='td_leyenda_activa'" onmousedown="this.className='td_leyenda_click'" onmouseout="this.className='td_leyenda_inactiva'">[<B>F8</B>]<br>Agenda Admision</td>
+ <td id="LEYENDA9" onselectstart="return false;" style="width:75px"; class="td_leyenda_inactiva" onmouseup="this.className='td_leyenda_activa'" onmouseover="this.className='td_leyenda_activa'" onmousedown="this.className='td_leyenda_click'" onmouseout="this.className='td_leyenda_inactiva'">[<B>F10</B>]<br>Cambio de Cama</td>
+ <td id="LEYENDA10" onselectstart="return false;" style="width:75px"; class="td_leyenda_inactiva" onmouseup="this.className='td_leyenda_activa'" onmouseover="this.className='td_leyenda_activa'" onmousedown="this.className='td_leyenda_click'" onmouseout="this.className='td_leyenda_inactiva'">[<B>F11</B>]<br>Aud. Estatus</td>
+ <td id="LEYENDA11" onselectstart="return false;" style="width:75px"; class="td_leyenda_inactiva" onmouseup="this.className='td_leyenda_activa'" onmouseover="this.className='td_leyenda_activa'" onmousedown="this.className='td_leyenda_click'" onmouseout="this.className='td_leyenda_inactiva'">[<B>ESC</B>]<br>Salir</td>
+</tr>
+</table>
+</tr>
+</table>
+</div>
+</div>
+</td>
+</tr>
+</table>
+<script>
+  var _mascaras = new Array;
+  var _tipos = new Array;
+</script>
+
+
+<script type="text/javascript">
+
+var cookie3 = getCookie('ID_X_M_DOCUMENTOS');
+var cookie2 = getCookie('FECHAS');
+var opcion      = '';
+var xdocumento  = '';
+var xmdocumento = '';
+var fecha       = '17/05/2010';
+var audita       = '';
+var xfechas='17/05/2010';
+var tipo 		= 'INFORMACION';
+var horas='15:25';
+var xorigen='';
+var departamento='';
+var grupo = 'RECEPCION';
+var fechaEgreso_old='';
+var cancela_enter_camas_disponibles='';
+var xorden=1;   //orden normal
+var xautoriza = '';
+
+//Constantes
+var _estatus_ocupada   = 'OCU';
+var _estatus_por_asear = 'PAS';
+var _estatus_mant      = 'MTO';
+var _estatus_reservada = 'RES';
+var _estatus_disponible = 'DIS';
+
+// Se crea el maestro de servicios
+var d_gestion_pacientes              = new lista("gestion_administrativa2/d_gestion_pacientes")
+	d_gestion_pacientes.nombre       = "d_gestion_pacientes";
+	d_gestion_pacientes.url          = server_path + "herramientas/genera_json/genera_json.php";
+	d_gestion_pacientes.funcion      = t_d_gestion_pacientes;
+	d_gestion_pacientes.padre        = "GRUPO1";
+	d_gestion_pacientes.onSelect     = OcultaLeyenda;
+	d_gestion_pacientes.buscador     = true;
+	d_gestion_pacientes.enter        = 0;
+	d_gestion_pacientes.asyncLoad    = true;
+
+// Se crea el maestro de servicios
+var documento              = new lista("gestion_administrativa2/d_documento")
+	documento.nombre       = "documento";
+	documento.url          = server_path + "herramientas/genera_xml/genera_xml.php";
+	documento.funcion      = t_documento;
+	documento.buscador     = false;
+	documento.modal        = true;
+	documento.enter        = 2;
+	documento.botonCerrar  = true;
+	documento.buscador     = true;
+
+// Se Crea el Grid de trayectoria
+var d_trayectoria             = new lista("gestion_administrativa2/d_trayectoria")
+	d_trayectoria.nombre      = "d_trayectoria";
+	d_trayectoria.url         = server_path + "herramientas/genera_xml/genera_xml.php";
+	d_trayectoria.funcion     = t_d_trayectoria;
+	d_trayectoria.buscador    = false;
+	d_trayectoria.modal       = true;
+	d_trayectoria.botonCerrar = true;
+	d_trayectoria.enter       = 2;
+//Grid de Usuario Autorizado
+var m_usuario             = new lista("gestion_administrativa2/m_usuarios")
+	m_usuario.nombre      = "m_usuario";
+	m_usuario.url         = server_path + "herramientas/genera_xml/genera_xml.php";
+	m_usuario.funcion     = t_m_usuario;
+	m_usuario.buscador    = true;
+	m_usuario.modal       = true;
+	m_usuario.botonCerrar = true;
+	m_usuario.asyncLoad   = true;
+	m_usuario.enter       = 0;
+	m_usuario.tabla_xml   = "V_USUARIOS_AUTORIZADOS";
+// Se Crea el Grid de trayectoria
+var m_camas_disponibles             = new lista("maestros/m_camas_disponibles")
+	m_camas_disponibles.nombre      = "m_camas_disponibles";
+	m_camas_disponibles.url         = server_path + "herramientas/genera_xml/genera_xml.php";
+	m_camas_disponibles.funcion     = t_m_camas_disponibles;
+	m_camas_disponibles.buscador    = true;
+	m_camas_disponibles.modal       = true;
+	m_camas_disponibles.botonCerrar = true;
+	m_camas_disponibles.asyncLoad   = true;
+	m_camas_disponibles.enter       = 2;
+
+//grid que llama el formulario f_edicion
+var m_camas_disponibles_form             = new lista("maestros/m_camas_disponibles_form")
+	m_camas_disponibles_form.nombre      = "m_camas_disponibles_form";
+	m_camas_disponibles_form.url         = server_path + "herramientas/genera_xml/genera_xml.php";
+	m_camas_disponibles_form.buscador    = true;
+	m_camas_disponibles_form.modal       = true;
+	m_camas_disponibles_form.botonCerrar = true;
+	m_camas_disponibles_form.asyncLoad   = true;
+	m_camas_disponibles_form.enter       = 1;
+
+// Se Crea el Grid detalles de Recaudos
+var d_recaudos             = new lista("agenda_trabajo/d_recaudos")
+	d_recaudos.nombre      = "d_recaudos";
+	d_recaudos.url         = server_path + "herramientas/genera_xml/genera_xml.php";
+	d_recaudos.funcion     = t_d_recaudos;
+	d_recaudos.buscador    = true;
+	d_recaudos.x           = 1;
+	d_recaudos.y           = 1;
+	d_recaudos.modal       = true;
+	d_recaudos.botonCerrar = true;
+	d_recaudos.enter       = 1;
+	d_recaudos.inicializa(false);
+
+// Se Crea el Grid de Maestro de Recaudos
+var m_tipo_recaudos             = new lista("maestros/m_tipo_recaudos")
+	m_tipo_recaudos.nombre      = "m_tipo_recaudos";
+	m_tipo_recaudos.url         = server_path + "herramientas/genera_xml/genera_xml.php";
+	m_tipo_recaudos.funcion     = t_m_tipo_recaudos;
+	m_tipo_recaudos.buscador    = true;
+	m_tipo_recaudos.x           = 1;
+	m_tipo_recaudos.y           = 1;
+	m_tipo_recaudos.modal       = true;
+	m_tipo_recaudos.botonCerrar = true;
+	m_tipo_recaudos.enter       = 1;
+	m_tipo_recaudos.onclose     = activaRecaudos;
+
+// Se Crea el Grid de Agenda
+var d_agenda             = new lista("gestion_administrativa2/d_agenda")
+	d_agenda.nombre      = "d_agenda";
+	d_agenda.url         = server_path + "herramientas/genera_xml/genera_xml.php";
+	d_agenda.funcion     = t_d_agenda;
+	d_agenda.buscador    = true;
+	d_agenda.x           = 1;
+	d_agenda.y           = 1;
+	d_agenda.modal       = true;
+	d_agenda.botonCerrar = true;
+	d_agenda.enter       = 1;
+
+var d_auditoria             = new lista("gestion_administrativa2/d_auditoria")
+	d_auditoria.nombre      = "d_auditoria";
+	d_auditoria.url         = server_path + "herramientas/genera_xml/genera_xml.php";
+	d_auditoria.funcion     = t_d_auditoria;
+	d_auditoria.buscador    = true;
+	d_auditoria.x           = 1;
+	d_auditoria.y           = 1;
+	d_auditoria.modal       = true;
+	d_auditoria.botonCerrar = true;
+	d_auditoria.enter       = 1;
+
+var d_pagos             = new lista("gestion_administrativa2/d_pagos")
+	d_pagos.nombre      = "d_pagos";
+	d_pagos.url         = server_path + "herramientas/genera_xml/genera_xml.php";
+	d_pagos.funcion     = t_d_pagos;
+	d_pagos.buscador    = true;
+	d_pagos.x           = 1;
+	d_pagos.y           = 1;
+	d_pagos.modal       = true;
+	d_pagos.botonCerrar = true;
+	d_pagos.enter       = 1;
+
+var contenedor             = new submodal();
+	contenedor.nombre      = 'contenedor';
+	contenedor.ancho       = 500;
+	contenedor.alto        = 372;
+	contenedor.x           = 100;
+	contenedor.y           = 50;
+	contenedor.titulo      = 'Edición';
+	contenedor.botonCerrar = true;
+	contenedor.leyenda     = creaLeyenda();
+	contenedor.usaFrame    = false;
+	contenedor.interpretar = false;
+	contenedor.onClose     = onclose;
+	contenedor.modal     = true;
+
+// Se Crea el Formulario para editar el detalle
+var f_edicion 			   = new formulario2('gestion_administrativa2/f_edicion');
+	f_edicion.nombre       = 'f_edicion';
+	f_edicion.funcion      = t_edicion;
+	f_edicion.padre        = 'contenedor_cuadro';
+
+// Se Crea el Formulario para editar el detalle
+var f_edicion2 			   = new formulario2('gestion_administrativa2/f_edicion2');
+	f_edicion2.nombre       = 'f_edicion2';
+	f_edicion2.funcion      = t_edicion2;
+	f_edicion2.padre        = 'contenedor_cuadro';
+
+var f_edicion4 = new formulario2('gestion_administrativa2/f_edicion4');
+	f_edicion4.nombre  = 'f_edicion4';
+	f_edicion4.funcion =  t_edicion4;
+	f_edicion4.padre   = 'contenedor_cuadro';
+
+var f_edicion5 = new formulario2('gestion_administrativa2/f_edicion5');
+	f_edicion5.nombre  = 'f_edicion5';
+	f_edicion5.funcion =  t_edicion5;
+	f_edicion5.padre   = 'contenedor_cuadro';
+
+//Define Menu Desplegable
+var pmenu=new popup('pmenu');
+	pmenu.position=_popupUp;
+	pmenu.action=t_pmenu;
+	pmenu.addItem('reporte', 'Trayectoria','verTrayectoria()');
+	pmenu.addItem('reporte', 'Ver Pagos','verPagos()');
+	pmenu.addItem('reporte', 'Camas Disponibles','verCamaDisponible()');
+
+var aut = new autorizacion('autoriza');
+var xidusuario = '003373';
+
+var impresora = new printer();
+
+function buscadpto()
+{
+	var xurl=server_path + 'herramientas/genera_xml/genera_xml.php';
+	var xparams='origen=gestion_administrativa2/d_gestion_pacientes&procedimiento=BUSCA_GRUPO&ID_M_USUARIOS='+xidusuario;
+
+	var xml=enviar(xurl, xparams, 'POST');
+	var reg=XML2Array(xml);
+	if (reg&&reg[0]&&reg[0]['ID_M_DEPARTAMENTOS'])
+	{
+	  departamento=reg[0]['ID_M_DEPARTAMENTOS'];
+	}
+}
+
+function Switch(opcion)
+{
+	switch(opcion)
+    {
+    	case 'E':
+        d_gestion_pacientes.filtro  ='NOMBRE_ZONA';
+    		d_gestion_pacientes.xfiltro ='EMERGENCIA';
+        d_gestion_pacientes.buscar('*');
+        _("item1").checked=true;
+        break;
+      case 'H':
+        d_gestion_pacientes.filtro  ='NOMBRE_ZONA';
+    		d_gestion_pacientes.xfiltro ='HOSPITALIZACION';
+        d_gestion_pacientes.buscar('*');
+        _("item2").checked=true;
+        break
+
+      case 'TODOS':
+        d_gestion_pacientes.filtro  ='';
+    	  d_gestion_pacientes.xfiltro ='';
+        d_gestion_pacientes.buscar('*');
+        _("item3").checked=true;
+        break;
+    }
+    d_gestion_pacientes.setFocus();
+}
+function ExisteRegistro(iddoc, idtipo)
+{
+  var tabla='D_RECAUDOS';
+  var campos='ID_X_M_DOCUMENTOS';
+  var busca='ID_X_M_DOCUMENTOS';
+  var xbusca=iddoc;
+  var filtro='ID_M_TIPO_RECAUDOS';
+  var xfiltro=idtipo;
+  var operador='=';
+
+  var xml=genera_xml(tabla, campos, busca, xbusca, operador,null,null,filtro,xfiltro);
+  var reg=XML2Array(xml);
+  return (reg[0]&&reg[0]['ID_X_M_DOCUMENTOS']);
+}
+function activaRecaudos()
+{
+  d_recaudos.mostrar();
+  d_recaudos.setFocus();
+}
+function actualizaAgendaCXC(idcli)
+{
+  var url=server_path + 'herramientas/genera_xml/genera_xml.php';
+  var params='origen=gestion_administrativa2/d_agenda&procedimiento=AGENDACXC&ID_M_CLIENTES='+idcli;
+  d_agenda.setTitle('AGENDA DEL CLIENTE');
+  d_agenda.onLoad=abreAgenda;
+  d_agenda.leeUrl(url, params);
+  d_agenda.mostrar();
+  d_agenda.setFocus();
+}
+function actualizaAgenda(iddoc)
+{
+  var url=server_path + 'herramientas/genera_xml/genera_xml.php';
+  var params='origen=gestion_administrativa2/d_agenda&procedimiento=AGENDA&ID_X_M_DOCUMENTOS='+iddoc;
+  d_agenda.setTitle('AGENDA DE ADMISION');
+  d_agenda.onLoad=abreAgenda;
+  d_agenda.leeUrl(url, params);
+  d_agenda.mostrar();
+  d_agenda.setFocus();
+}
+function agregarAgenda()
+{
+	if (!departamento) buscadpto();
+	var mfecha=fecha;
+	f_edicion4.limpiar();
+	f_edicion4.setValue('FECHA_AGENDA', mfecha);
+	var thoras= horas;
+	f_edicion4.mostrarCampo('IDX');
+	f_edicion4.setValue('FECHA_AGENDA_H', horas);
+	f_edicion4.setValue('ID_M_DEPARTAMENTOS', departamento);
+	var idx = (xtabla=='M_CLIENTES') ? d_gestion_pacientes.getValue('ID_M_CLIENTES') : d_gestion_pacientes.getValue('ID_X_M_DOCUMENTOS');
+	var xorigen = (xtabla=='M_CLIENTES') ? 'CXC' : 'ADM';
+	f_edicion4.setValue('IDX', idx);
+	f_edicion4.setValue('ORIGEN', xorigen);
+	f_edicion4.setValue('TABLA', xtabla);
+	mostrar_formulario(f_edicion4);
+}
+function abreAgenda(xml)
+{
+  d_agenda.mostrar();
+  d_agenda.setFocus();
+}
+function verPagos()
+{
+	xpaciente = d_gestion_pacientes.getValue('ID_M_PACIENTES');
+	if(!xpaciente)return;
+  var id_x_documento = d_gestion_pacientes.getValue('ID_X_M_DOCUMENTOS');
+	url = server_path + "herramientas/genera_xml/genera_xml.php";
+	param =  "origen=gestion_administrativa2/d_documento&procedimiento=DOCUMENTOS&ID_M_PACIENTES=" + xpaciente+"&ID_X_M_DOCUMENTOS="+id_x_documento;
+	x = enviar(url,param,'POST');
+	var registro = XML2Array(x);
+	if(!registro[0])return;
+  if(registro[0]['ESTATUS']!='C')
+  {
+    d_pagos.filtro='IDX;TABLA'
+    d_pagos.xfiltro=id_x_documento+';X_M_DOCUMENTOS';
+  }
+	else
+	{
+	  xdocumento = registro[0]['ID_M_DOCUMENTOS'];
+	  d_pagos.filtro='IDX;TABLA'
+	  d_pagos.xfiltro=xdocumento+';M_DOCUMENTOS';
+	}
+  d_pagos.buscar('*');
+  d_pagos.mostrar();
+  d_pagos.setFocus();
+}
+function modificaIngreso(xml)
+{
+  if (tipo=="INFORMACION") return false;
+  var registro = XML2Array(xml);
+  if(!registro[0]) return false;
+  xdocumento        = registro[0]['ID_A_DOCUMENTOS'];
+  xmdocumento       = registro[0]['ID_X_M_DOCUMENTOS'];
+  xclientes         = registro[0]['ID_M_CLIENTES'];
+  xnombre_cliente   = registro[0]['NOMBRE_CLIENTE'];
+  xpacientes        = registro[0]['NOMBRES'];
+  xestatus          = registro[0]['ESTATUS'];
+  var xestatus2     = registro[0]['ESTATUS2'];
+  id_cama         = registro[0]['ID_M_CAMAS'];
+
+  if(xestatus=='AD')
+  {
+    f_edicion2.ocultar();
+    contenedor.cuadro.style.overflow = 'auto';
+    formulario_mostrar(f_edicion);
+    f_edicion.buscar(xdocumento);
+    if (!xestatus2) f_edicion.setValue('ESTATUS2','ACT');
+    f_edicion.setValue('NOMBRES',xpacientes);
+    f_edicion.setValue('ID_M_CLIENTES',xclientes);
+    f_edicion.setValue('r_ID_M_CLIENTES',xnombre_cliente);
+    var id_cama = d_gestion_pacientes.getValue('ID_M_CAMAS');
+    var nom_cama = d_gestion_pacientes.getValue('NOMBRE_CAMA');
+    if (!id_cama) id_cama = '';
+    f_edicion.setValue('r_ID_M_CAMAS',nom_cama);
+    f_edicion.setValue('ID_M_CAMAS',id_cama);
+  }
+  else if (xestatus=='ALT')
+  {
+    alert('El paciente ya fué dado de Alta!!');
+  }
+}
+function ingresaPaciente(xml)
+{
+  if (tipo=="INFORMACION") return false;
+  var xestatusx=d_gestion_pacientes.getValue('ESTATUS');
+  var xestatus2x=d_gestion_pacientes.getValue('ESTATUS2');
+  if(xestatusx=='ALT'||xestatus2x=='INA')
+  {
+    var registro = XML2Array(xml);
+    if(!registro[0]) return false;
+    xdocumento      = registro[0]['ID_A_DOCUMENTOS'];
+    xmdocumento     = registro[0]['ID_X_M_DOCUMENTOS'];
+    xclientes       = registro[0]['ID_M_CLIENTES'];
+    xnombre_cliente = registro[0]['NOMBRE_CLIENTE'];
+    xpacientes      = registro[0]['NOMBRES'];
+    xestatus        = registro[0]['ESTATUS'];
+    if (xestatus)
+    {
+      if (!confirm('¿Desea volver a ingresar este paciente?')) return;
+    }
+    f_edicion.ocultar();
+    f_edicion2.limpiar();
+    contenedor.cuadro.style.overflow = 'auto';
+    formulario_mostrar(f_edicion2);
+    if(xdocumento)
+    {
+      f_edicion2.buscar(xdocumento);
+    }
+    else
+    {
+      f_edicion2.setValue('IDX',xmdocumento);
+    }
+    f_edicion2.setValue('FECHA_INGRESO',fecha);
+    f_edicion2.setValue('ESTATUS','AD');
+    f_edicion2.setValue('ESTATUS2','ACT');
+    f_edicion2.setValue('TABLA','X_M_DOCUMENTOS');
+    f_edicion2.setValue('NOMBRES',xpacientes);
+    f_edicion2.setValue('ID_M_CLIENTES',xclientes);
+    f_edicion2.setValue('r_ID_M_CLIENTES',xnombre_cliente);
+    }
+  else
+  {
+    alert('Este Paciente ya fue Ingresado');
+  }
+}
+function verTrayectoria(xml)
+{
+  if(tipo=="INFORMACION") return false;
+  xdocumento = d_gestion_pacientes.getValue('ID_A_DOCUMENTOS');
+  if (!xdocumento)
+  {
+    alert('Este paciente no ha sido ingresado');
+    return false;
+  }
+  d_trayectoria.filtro  = 'ID_A_DOCUMENTOS'
+  d_trayectoria.xfiltro = xdocumento;
+  d_trayectoria.buscar('*');
+  d_trayectoria.mostrar();
+  d_trayectoria.setFocus();
+}
+function verDetalle(xml)
+{
+  if (tipo=="INFORMACION") return false;
+  var xmdocumento = d_gestion_pacientes.getValue('ID_X_M_DOCUMENTOS');
+  if (!xmdocumento) return false;
+  documento.tabla_xml ='V_X_DOCUMENTOS';
+  documento.indice='ID_D_DOCUMENTOS';
+  documento.filtro = 'ID_X_M_DOCUMENTOS';
+  documento.xfiltro = xmdocumento;
+  documento.buscar('*');
+  documento.mostrar();
+  documento.setFocus();
+}
+function cargaRecaudo(xml)
+{
+  if (tipo=="INFORMACION") return false;
+  var xmdocumentos = d_gestion_pacientes.getValue('ID_X_M_DOCUMENTOS');
+  var xdocumento = d_gestion_pacientes.getValue('ID_A_DOCUMENTOS');
+  var xml2 = d_recaudos.leeUrl(d_recaudos.url , "origen=gestion_administrativa2/d_recaudos&procedimiento=DETALLE&ID_X_M_DOCUMENTOS=" + xmdocumentos);
+  var registro = XML2Array(xml2);
+  if(!registro[0])
+  {
+    var tabla  = 'A_DOCUMENTOS';
+    var campos = new Array;
+    var busca  = 'ID_A_DOCUMENTOS';
+    var xbusca = xdocumento;  ;
+    campos['CONDICION1'] = new Campo('*');
+    var xml2 = actualizar_registro(tabla, campos, busca, xbusca);
+    var registro     = XML2Array(xml2);
+    var xml = d_recaudos.leeUrl(d_recaudos.url , "origen=gestion_administrativa2/d_recaudos&procedimiento=DETALLE&ID_X_M_DOCUMENTOS=" + xmdocumentos);
+  }
+  d_recaudos.mostrar();
+  d_recaudos.buscar('*');
+  d_recaudos.setFocus();
+}
+function cargaAgendaadm(xml)
+{
+ xtabla='X_M_DOCUMENTOS';
+ var id = d_gestion_pacientes.getValue('ID_X_M_DOCUMENTOS');
+ if (!id) return;
+ actualizaAgenda(id);
+}
+function cargaAgendacxc(xml)
+{
+  var xidx = d_gestion_pacientes.getValue('ID_A_DOCUMENTOS');
+  if(!xidx) return;
+  d_auditoria.filtro='IDX;TABLA';
+  d_auditoria.xfiltro=xidx+';A_DOCUMENTOS';
+  d_auditoria.buscar('*');
+  d_auditoria.mostrar();
+  d_auditoria.setFocus()
+}
+
+function cambiaCama(xml)
+{
+  var idxadocumentos = d_gestion_pacientes.getValue('ID_A_DOCUMENTOS');
+  var xestatuspac=d_gestion_pacientes.getValue('ESTATUS');
+  if(!idxadocumentos)return false;
+  if(xestatuspac=='AD')
+  {
+    CambiaLeyenda_cama_disponible(2);
+    cancela_enter_camas_disponibles=2;
+    m_camas_disponibles.buscar('*');
+    m_camas_disponibles.mostrar();
+    m_camas_disponibles.setFocus();
+  }
+}
+
+function verCamaDisponible()
+{
+  CambiaLeyenda_cama_disponible(1)
+  cancela_enter_camas_disponibles=1;
+  m_camas_disponibles.mostrar();
+  m_camas_disponibles.setFocus();
+}
+function cambiaOrden()
+{
+  if (xorden==1)
+  {
+    d_gestion_pacientes.orden='COBERTURA';
+    d_gestion_pacientes.buscar('*');
+    xorden=2;
+  }
+  else
+  {
+    d_gestion_pacientes.orden='NOMBRE_CAMA NULLS LAST,NOMBRES';
+    d_gestion_pacientes.buscar('*');
+    xorden=1;
+  }
+  d_gestion_pacientes.setFocus();
+}
+function filtrarGestion()
+{
+  formulario_mostrar(f_edicion5);
+  f_edicion5.setValue('FECHA_DESDE',xfechas);
+  f_edicion5.setValue('FECHA_HASTA',xfechas);
+}
+function InsertaRecaudo(iddoc,idtipo)
+{
+   var tabla  = 'D_RECAUDOS';
+   var campos = new Array;
+   var busca  = 'ID_D_RECAUDOS';
+   var xbusca = '-1';
+   campos['ID_M_DOCUMENTOS'] = new Campo('?');
+   campos['ID_X_M_DOCUMENTOS'] = new Campo(iddoc);
+   campos['ID_M_TIPO_RECAUDOS'] = new Campo(idtipo);
+   var xml = actualizar_registro(tabla, campos, busca, xbusca);
+}
+
+function asignaCama(idcama)
+{
+	  if(!idcama) return false;
+    var id_x_m_doc = d_gestion_pacientes.getValue('ID_X_M_DOCUMENTOS');
+    var url=server_path + 'herramientas/utiles/actualizar_registro.php';
+    var params='origen=gestion_administrativa2/d_gestion_pacientes&procedimiento=ASIGNACAMAS&ID_X_M_DOCUMENTOS='+id_x_m_doc+'&ID_M_CAMAS='+idcama;
+    var xml = enviar(url,params,'GET');
+}
+//-------- SECCION MUESTRA FORMULARIOS ------//
+function formulario_mostrar(xformulario)
+{
+  f_activo = xformulario;
+  contenedor.mostrar();
+  contenedor.setTitle(xformulario.titulo);
+  contenedor.setWidth(xformulario.ancho);
+  contenedor.setHeight(xformulario.alto);
+  xformulario.mostrar();
+  xformulario.setFocus();
+}
+function mostrar_formulario(xformulario)
+{
+	f_edicion.ocultar();
+  f_edicion2.ocultar();
+  f_edicion4.ocultar();
+  f_edicion5.ocultar();
+  f_activo = xformulario;
+  d_agenda.ocultar();
+  contenedor.setTitle(xformulario.titulo);
+	contenedor.setWidth(xformulario.ancho);
+ 	contenedor.setHeight(xformulario.alto);
+	contenedor.mostrar();
+	xformulario.mostrar();
+	xformulario.setFocus();
+}
+//----- SECCION FUNCIONES DE TECLAS-----//
+function t_d_gestion_pacientes(objeto, tecla, xml, e)
+{
+  var evt = window.event || e;
+  var isCtrlPressed  = evt.ctrlKey;
+  var isAltPressed   = evt.altKey;
+
+  switch (tecla)
+  {
+    case _enter: // Enter Seleccionar
+      cancelaTecla(evt);
+      modificaIngreso(xml);
+      break;
+    case _insert:
+      cancelaTecla(evt);
+      ingresaPaciente(xml);
+      break;
+    case _esc://Escape Salir
+      cancelaTecla(evt);
+      Salir();
+      break;
+    case _f2: //Filtrar
+      cancelaTecla(evt);
+      filtrarGestion();
+      break;
+    case _f3:
+      cancelaTecla(evt);
+      pmenu.show(LEYENDA4, 'reporte');
+//      verTrayectoria(xml);
+      break;
+    case _f4:
+      cancelaTecla(evt);
+      verDetalle(xml);
+      break;
+    case _f5:
+      cancelaTecla(evt);
+      verCamaDisponible();
+      break;
+    case _f6: //F6 Carga Recaudos
+      cancelaTecla(evt);
+      cargaRecaudo(xml);
+      break;
+    case _f7:
+    	cancelaTecla(evt);
+      cambiaOrden()
+      break;
+    case _f8:    //cargar agenda admision
+      cancelaTecla(evt);
+      cargaAgendaadm(xml);
+      break;
+    case _f10:  //Camas Disponible
+      cancelaTecla(evt);
+      var reg = XML2Array(xml);
+      if(reg[0]&&reg[0]['NOMBRE_CAMA']=='EGRESADO') return;
+      cambiaCama(xml);
+      break;
+    case _f11: //cargar agenda CXC
+      cancelaTecla(evt);
+      cargaAgendacxc(xml);
+      break;
+    case _f12:
+    case _f9:
+    	cancelaTecla(evt);
+      break;
+  }
+}
+function anulaAutorizacion(idDoc)
+{
+   var doc = idDoc;
+   var xurl=server_path + 'herramientas/utiles/actualizar_registro.php';
+   var xparams="origen=gestion_administrativa2/d_gestion_pacientes&procedimiento=ANULA_AUTORIZACION&IDX="+doc;
+   var xml=enviar(xurl, xparams, 'POST');
+
+}
+function guardaAutorizacion(idDoc,usuario)
+{
+   var doc                  = idDoc;
+   var tabla                = 'D_AUTORIZACIONES';
+   var campos               = new Array;
+   var busca                = 'ID_D_AUTORIZACIONES';
+   var xbusca               = -1;
+   campos['IDX']            = new Campo(doc);
+   campos['TABLA']          = new Campo('A_DOCUMENTOS');
+   campos['TIPO']           = new Campo(usuario.type);
+   campos['ID_M_USUARIOS2'] = new Campo(usuario.id);
+   var xml = actualizar_registro(tabla, campos, busca, xbusca);
+
+}
+function autoriza(usuario)
+{
+   if(!usuario)
+   {
+     m_usuario.setFocus();
+     return;
+   }
+
+   if ((usuario.dir <= _administracion && usuario.level <= _nivel_coordinador && usuario.level != _nivel_asesor) ||
+       (usuario.level = _nivel_director) || (usuario.level = _nivel_dir_gen)) // de gerente en adelante
+   {
+     switch(f_activo.nombre)
+     {
+        case 'f_edicion':
+          guardaInfoGestion(usuario);
+          xautoriza='';
+          break;
+        case 'f_edicion2':
+          var alerta =f_edicion2.getValue('xbusca');
+          guardaIngreso(usuario);
+          xautoriza='';
+	      break;
+      }
+      m_usuario.ocultar();
+      d_gestion_pacientes.setFocus();
+     return;
+   }
+   alert('No autorizado');
+   m_usuario.ocultar();
+   f_activo.setFocus();
+}
+function t_m_usuario(objeto, tecla, xml, e)
+{
+  var evt = window.event || e;
+
+  switch (tecla)
+  {
+	case _enter://Escape Salir
+      cancelaTecla(evt);
+      aut.mostrar('LOC');
+      break;
+    case _esc://Escape Salir
+      cancelaTecla(evt);
+      m_usuario.ocultar();
+      f_activo.setValue('ID_M_CLIENTES','');
+      f_activo.setValue('r_ID_M_CLIENTES','');
+      f_activo.setFocus();
+      break;
+    case _f4:
+      cancelaTecla(evt);
+      aut.mostrar('REM');
+      break;
+    case _f2:
+    case _f3:
+    case _f5:
+    case _f6:
+    case _f7:
+    case _f8:
+    case _f9:
+    case _f10:
+    case _f11:
+    case _f12:
+        cancelaTecla(evt);
+        break;
+  }
+}
+function t_pmenu(obj,tecla)
+{
+  switch (tecla)
+  {
+    case _f3:
+      pmenu.show(LEYENDA3,'reporte');
+      break;
+    case _esc:
+      d_gestion_pacientes.setFocus();
+      break;
+  }
+}
+function t_m_tipo_recaudos(objeto,tecla,e)
+{
+  var evt = window.event || e;
+
+  switch (tecla)
+  {
+    case _esc: // Escape cerrar recaudos
+    	cancelaTecla(evt);
+        m_tipo_recaudos.ocultar();
+        d_recaudos.actualizaXml();
+        d_recaudos.mostrar();
+        d_recaudos.setFocus();
+    break;
+
+    case _enter: // anexar recaudo
+        cancelaTecla(evt);
+        var xiddoc=d_gestion_pacientes.getValue('ID_X_M_DOCUMENTOS');
+        var xidtipo=m_tipo_recaudos.getValue('ID_M_TIPO_RECAUDOS');
+
+        if (!xiddoc||!xidtipo)
+        {
+           d_recaudos.mostrar();
+           d_recaudos.setFocus();
+           return false;
+        }
+
+        if (ExisteRegistro(xiddoc, xidtipo))
+        {
+           alert('Disculpe, este recaudo ya existe');
+           //m_tipo_recaudos.ocultar();
+           m_tipo_recaudos.buscar('*');
+           m_tipo_recaudos.setFocus();
+           return false;
+        }
+
+        InsertaRecaudo(xiddoc, xidtipo);
+        m_tipo_recaudos.ocultar();
+        d_recaudos.actualizaXml();
+        d_recaudos.mostrar();
+        d_recaudos.setFocus();
+
+    break;
+  }
+}
+function t_d_pagos(objeto, tecla, xml, e)
+{
+  var evt = window.event || e;
+  switch (tecla)
+  {
+    case _esc://Escape
+        cancelaTecla(evt);
+        d_pagos.ocultar();
+        d_gestion_pacientes.setFocus();
+        break;
+    case _f2:
+    case _f3:
+    case _f4:
+    case _f5:
+    case _f6:
+    case _f9:
+       cancelaTecla(evt);
+       break;
+  }
+}
+function t_d_agenda(objeto, tecla, xml, e)
+{
+  var evt = window.event || e;
+
+  switch (tecla)
+  {
+    case _enter: // Enter
+	    var registro = XML2Array(xml);
+
+        xdocumento = registro[0]['DOCUMENTO'];
+
+        if (xdocumento)
+        {
+        	d_recaudos.setFocus();
+        	CambiaLeyenda(2);
+        }
+    break;
+
+    case _barra:
+        cancelaTecla(evt);
+        var registro = XML2Array(xml);
+        var confirmar = confirm('¿Desea cambiar el Estatus?');
+        var id_agenda= d_agenda.getValue('ID_D_AGENDA');
+        if(confirmar)
+        {
+	    	var tabla  = 'D_AGENDA';
+	        var campos = new Array;
+	        var busca  = 'ID_D_AGENDA';
+	        var xbusca = id_agenda  ;
+	        campos['ESTATUS'] = new Campo('C');
+
+            var xml = actualizar_registro(tabla, campos, busca, xbusca);
+
+            d_agenda.actualizar(id_agenda);
+    		d_agenda.setFocus();
+
+        }
+    break;
+
+    case _insert: // Insertar
+      cancelaTecla(evt);
+      agregarAgenda();
+    break;
+
+    case _esc://Escape
+        cancelaTecla(evt);
+        d_agenda.ocultar();
+        d_gestion_pacientes.setFocus();
+        var id = d_gestion_pacientes.getValue('ID_X_M_DOCUMENTOS');
+        d_gestion_pacientes.actualizar(id);
+    break;
+
+    case _f2:
+        cancelaTecla(evt);
+        ImprimeInforme();
+        //VerPreview2();
+    break;
+
+    case _f3:
+        cancelaTecla(evt);
+       /* var registro = XML2Array(xml);
+
+	    var tabla  = 'D_CXCCXP';
+	    var campos = new Array;
+	    var busca  = 'ID_D_CXCCXP';
+	    var xbusca = registro[0]['ID_D_CXCCXP'];  ;
+	    campos['ESTATUS'] = new Campo('ETR');
+
+	    var xml = actualizar_registro(tabla, campos, busca, xbusca);
+        d_recaudos.actualizar(registro[0]['ID_D_CXCCXP']);
+    	d_recaudos.setFocus();   */
+    break;
+
+    case _f4:
+     	cancelaTecla(evt);
+        var registro = XML2Array(xml);
+        xdocumento = registro[0]['DOCUMENTO'];
+    	VerPreview(xdocumento);
+    break;
+
+    case _f5:
+        cancelaTecla(evt);
+        VerPreview2();
+    break;
+
+    case _f6:
+        cancelaTecla(evt);
+       /* m_clientes.mostrar();
+        m_clientes.setFocus(); */
+    break;
+
+    case _f9:
+         cancelaTecla(evt);
+    break;
+  }
+}
+
+function t_d_trayectoria(objeto, tecla, xml, e)
+{
+  var evt = window.event || e;
+  var isCtrlPressed  = evt.ctrlKey;
+  var isAltPressed   = evt.altKey;
+
+ // cancelaTecla(evt);
+  switch (tecla)
+  {
+    case _enter: // Enter Seleccionar
+        cancelaTecla(evt);
+        var registro = XML2Array(xml);
+        if(!registro[0]) return false;
+    break;
+
+    case _esc://Escape Salir
+        cancelaTecla(evt);
+      	d_trayectoria.ocultar();
+        d_gestion_pacientes.setFocus();
+    break;
+
+    case _f3:
+        cancelaTecla(evt);
+        var registro = XML2Array(xml);
+        if(!registro[0]) return false;
+    break;
+  }
+}
+function t_m_camas_disponibles(objeto, tecla, xml, e)
+{
+  var evt = window.event || e;
+  var isCtrlPressed  = evt.ctrlKey;
+  var isAltPressed   = evt.altKey;
+
+ // cancelaTecla(evt);
+  switch (tecla)
+  {
+	case _enter://Escape Salir
+      cancelaTecla(evt);
+      var id_cama = m_camas_disponibles.getValue('ID_M_CAMAS');
+      asignaCama(id_cama);
+      m_camas_disponibles.ocultar();
+      Refrescar();
+      break;
+    case _esc://Escape Salir
+      cancelaTecla(evt);
+      m_camas_disponibles.ocultar();
+      d_gestion_pacientes.setFocus();
+      break;
+    case _f4:
+    	cancelaTecla(evt);
+      if (tipo=="INFORMACION") return false;
+      impresora.origin='reportes/r_camas_disponibles';
+      impresora.showDialog=true;
+      impresora.preview();
+	    m_camas_disponibles.setFocus();
+    	break;
+    case _f2:
+    case _f3:
+    case _f5:
+    case _f6:
+    case _f7:
+    case _f8:
+    case _f9:
+    case _f10:
+    case _f11:
+    case _f12:
+        cancelaTecla(evt);
+        break;
+  }
+}
+function t_d_recaudos(objeto, tecla, xml, e)
+{
+  var evt = window.event || e;
+
+  switch (tecla)
+  {
+    case _insert: // Insertar
+        cancelaTecla(evt);
+        d_recaudos.ocultar();
+        m_tipo_recaudos.mostrar();
+        m_tipo_recaudos.setFocus();
+    break;
+
+    case _esc://ESCAPE
+        cancelaTecla(evt);
+		d_recaudos.ocultar();
+		d_gestion_pacientes.setFocus();
+    break;
+
+    case _barra:
+        cancelaTecla(evt);
+        var registro = XML2Array(xml);
+
+	    var tabla  = 'D_RECAUDOS';
+	    var campos = new Array;
+	    var busca  = 'ID_D_RECAUDOS';
+	    var xbusca = registro[0]['ID_D_RECAUDOS'];  ;
+        if(registro[0]['ESTATUS']=='PEN') campos['ESTATUS'] = new Campo('CUM');
+        if(registro[0]['ESTATUS']=='CUM') campos['ESTATUS'] = new Campo('NRE');
+        if(registro[0]['ESTATUS']=='NRE') campos['ESTATUS'] = new Campo('PEN');
+
+	    var xml = actualizar_registro(tabla, campos, busca, xbusca);
+
+        d_recaudos.actualizar(registro[0]['ID_D_RECAUDOS']);
+    	d_recaudos.setFocus();
+    break;
+
+    case _supr: //Suprimir
+    break;
+
+    case _f2:
+     /*    var registro = XML2Array(xml);
+         xdocumento = registro[0]['ID_M_m_facturas'];
+         ImprimeInforme(xdocumento);  */
+    break;
+
+    case _f7: //F7
+        cancelaTecla(evt);
+    break;
+  }
+}
+function t_d_auditoria(objeto, tecla, xml, e)
+{
+  var evt = window.event || e;
+
+  switch (tecla)
+  {
+    case _insert: // Insertar
+        cancelaTecla(evt);
+    break;
+
+    case _esc://ESCAPE
+        cancelaTecla(evt);
+		d_auditoria.ocultar();
+		d_gestion_pacientes.setFocus();
+        break;
+
+    case _barra:
+        cancelaTecla(evt);
+        break;
+
+    case _supr: //Suprimir
+    break;
+
+    case _f2:
+    break;
+
+    case _f7: //F7
+        cancelaTecla(evt);
+        break;
+  }
+}
+function t_documento(objeto, tecla, xml, e)
+{
+  var evt = window.event || e;
+  var isCtrlPressed  = evt.ctrlKey;
+  var isAltPressed   = evt.altKey;
+  switch (tecla)
+  {
+    case _enter: // Enter Seleccionar
+        cancelaTecla(evt);
+        var registro = XML2Array(xml);
+        if(!registro[0]) return false;
+    break;
+
+    case _esc://Escape Salir
+        cancelaTecla(evt);
+      	documento.ocultar();
+        d_gestion_pacientes.setFocus();
+    break;
+
+    case _f3:
+        cancelaTecla(evt);
+        var registro = XML2Array(xml);
+        if(!registro[0]) return false;
+    break;
+  }
+}
+function t_edicion(objeto,tecla)
+{
+  var evt = window.event || e;
+  switch (tecla)
+  {
+    case _esc://Salir
+      cancelaTecla(evt);
+      contenedor.ocultar();
+      f_edicion.ocultar();
+      d_gestion_pacientes.setFocus();
+      break;
+
+    case _f12: // F12
+      cancelaTecla(evt);
+      Guardar();
+      break;
+  }
+}
+function t_edicion2(objeto,tecla)
+{
+  var evt = window.event || e;
+  switch (tecla)
+  {
+    case _esc://Salir
+	    cancelaTecla(evt);
+      contenedor.ocultar()
+      f_edicion2.ocultar();
+      d_gestion_pacientes.setFocus();
+      break;
+    case _f12: // F12
+	    cancelaTecla(evt);
+      Guardar();
+      break;
+  }
+}
+
+function t_edicion4(objeto,tecla,e)
+{
+  var evt = window.event || e;
+  switch (tecla)
+  {
+    case _esc: // Escape Cerrar Formulario
+      cancelaTecla(evt);
+      f_edicion4.ocultar();
+      contenedor.ocultar();
+		  abreAgenda();
+      break;
+    case _f12: // F12 Guardar
+      cancelaTecla(evt);
+      Guardar();
+      break;
+  }
+}
+function t_edicion5(objeto,tecla,e)
+{
+  var evt = window.event || e;
+
+  switch (tecla)
+  {
+    case _esc: // Escape Cerrar Formulario
+      cancelaTecla(evt);
+      contenedor.ocultar();
+	    f_edicion5.ocultar();
+	    d_gestion_pacientes.setFocus();
+    break;
+
+    case _f12: // F12 Guardar
+     	cancelaTecla(evt);
+      Guardar();
+      break;
+  }
+}
+//-------- SECCION DE GUARDAR --------//
+function guardaInfoGestion(usuario)
+{
+
+  var fe = comparaFechas(f_edicion.getValue('FECHA_INGRESO'),f_edicion.getValue('FECHA_EGRESO'));
+  if (fe<0) // la fecha ingreso es mayor que la de egreso
+  {
+    alert('Las fechas no son válidas\nPor favor verifique las fechas');
+    frm_f_edicion.FECHA_EGRESO.focus();
+    return;
+  }
+	var nombre_profesional  = f_edicion.getValue('r_ID_I_PROF_ESPE');
+	var nombre_diagnosticos = f_edicion.getValue('r_ID_M_DIAGNOSTICOS');
+	var idCliente           = f_edicion.getValue('ID_M_CLIENTES');
+  var clave               = f_edicion.getValue('CLAVE');
+  var montoaprobado       = f_edicion.getValue('MONTO_APROBADO');
+
+  if(clave||montoaprobado)
+  {
+    if(!idCliente)
+    {
+      alert('Debe ingresar el cliente');
+      return;
+    }
+  }
+	var idCamaAsignada   = f_edicion.getValue('ID_M_CAMAS');
+  var idxmdocumento     = d_gestion_pacientes.getValue('ID_X_M_DOCUMENTOS');
+/*  if(!f_edicion.getValue('ID_M_PRODUCTOS'))
+  {
+    alert('El protocolo es Requerido');  //Protocolo requerido
+    return;
+  }
+*/
+  f_edicion.setValue('NOMBRE_DIAGNOSTICO',nombre_diagnosticos);
+  f_edicion.setValue('NOMBRE_PROFESIONAL',nombre_profesional);
+
+  var registro = f_edicion.submit();
+  if(!registro) return;
+ var xidadoc             = registro[0]['ID_A_DOCUMENTOS'];
+  anulaAutorizacion(xidadoc);
+ contenedor.ocultar();
+  f_edicion.ocultar();
+  f_edicion.limpiar();
+  if (usuario) guardaAutorizacion(xidadoc,usuario); //Guarda la Autorizacion
+  if(idCamaAsignada)
+  {
+    asignaCama(idCamaAsignada);
+  }
+  if(idCliente!=xclientes)
+  {
+    var url = server_path + 'herramientas/utiles/actualizar_registro.php';
+	  var params = 'tabla=X_M_DOCUMENTOS&';
+	  params    += 'busca=ID_X_M_DOCUMENTOS&';
+	  params    += 'xbusca='+xmdocumento;
+	  params    += '&c_ID_M_CLIENTES_RSS=' + idCliente;
+	  //params    += '&c_NOMBRE_CLIENTE_CSS=' + xnombre_cliente;
+    var x = enviar(url, params, 'POST');
+  }
+
+  m_camas_disponibles.buscar('*');
+  d_gestion_pacientes.actualizar(xmdocumento);
+}
+
+
+function guardaIngreso(usuario)
+{
+  var idCliente           = f_edicion2.getValue('ID_M_CLIENTES');
+  var clave               = f_edicion2.getValue('CLAVE');
+  var montoaprobado       = f_edicion2.getValue('MONTO_APROBADO');
+  var montoaprobado       = parseFloat(montoaprobado)
+  var xestatusx           = d_gestion_pacientes.getValue('ESTATUS');
+  var xestatus2x          = d_gestion_pacientes.getValue('ESTATUS2');
+  var xidadoc             = d_gestion_pacientes.getValue('ID_A_DOCUMENTOS')
+  var idCamaAsignada      = f_edicion2.getValue('ID_M_CAMAS');
+  var nombre_profesional  = f_edicion2.getValue('r_ID_I_PROF_ESPE');
+  var nombre_diagnosticos = f_edicion2.getValue('r_ID_M_DIAGNOSTICOS');
+  var idCliente           = f_edicion2.getValue('ID_M_CLIENTES');
+  f_edicion2.setValue('NOMBRE_DIAGNOSTICO',nombre_diagnosticos);
+  f_edicion2.setValue('NOMBRE_PROFESIONAL',nombre_profesional);
+  var idAdocumentos  = d_gestion_pacientes.getValue('ID_A_DOCUMENTOS');
+  if(clave || montoaprobado>0)
+  {
+    if(!idCliente)
+    {
+      alert('Debe ingresar el cliente');
+      return;
+    }
+  }
+  var registro = f_edicion2.submit();
+  if (!registro) return;
+  var xidadoc  = registro[0]['ID_A_DOCUMENTOS'];
+  anulaAutorizacion(xidadoc);
+  if (usuario) guardaAutorizacion(xidadoc,usuario); //Guarda la Autorizacion
+  if(idCamaAsignada)
+  {
+    asignaCama(idCamaAsignada);
+  }
+  if(idCliente!=xclientes)
+  {
+    var url = server_path + 'herramientas/utiles/actualizar_registro.php';
+    var params = 'tabla=X_M_DOCUMENTOS&';
+        params    += 'busca=ID_X_M_DOCUMENTOS&';
+        params    += 'xbusca='+xmdocumento;
+        params    += '&c_ID_M_CLIENTES_RSS=' + idCliente;
+        var x = enviar(url, params, 'POST');
+
+  }
+  contenedor.ocultar();
+  f_edicion2.ocultar();
+  Refrescar();
+}
+function guardaAgenda()
+{
+  var fechaFor=f_edicion4.getValue('FECHA_AGENDA');
+  var fe=comparaFechas(xfechas,fechaFor);
+  xagenda=f_edicion4.getValue('IDX');
+  id = xagenda;
+  if (fe<0)
+  {
+    alert('La fecha no puede ser anterior a la fecha actual');
+    return;
+  }
+  var registro = f_edicion4.submit();
+  if (!registro) return;
+  if (xtabla=='M_CLIENTES') actualizaAgendaCXC(id);
+  else actualizaAgenda(id);
+  f_edicion4.ocultar();
+  contenedor.ocultar();
+  d_agenda.setFocus();
+}
+function tipoCliente(obj, xml)
+{
+  var reg = XML2Array(xml);
+  xautoriza=reg[0]['AUTORIZA'];
+}
+function verAnalisis()
+{
+  var fecha1 = f_edicion5.getValue('FECHA_DESDE');
+  var fecha2 = f_edicion5.getValue('FECHA_HASTA');
+  var fe=comparaFechas(fecha1,fecha2);
+  if (fe<0)
+  {
+    alert('La fecha no puede ser anterior a la fecha actual');
+    return;
+  }
+  previewAnalisis();
+  setTimeout("d_gestion_pacientes.setFocus()",500);
+}
+function Guardar()
+{
+    var val = f_activo.validar();
+    if(!val) return;
+
+    if (xautoriza == 'SI')
+    {
+//       alert('La asignacion de EFECTOS POR COBRAR REQUIERE AUTORIZACION:\n\nA continuación se le muestran los usuarios que autorizan');
+       m_usuario.buscar('*');
+	   m_usuario.mostrar();
+	   m_usuario.setFocus();
+    }
+    else
+    {
+      switch(f_activo.nombre)
+      {
+        case 'f_edicion':
+          guardaInfoGestion();
+	          xautoriza='';
+        break;
+
+        case 'f_edicion2':
+          var alerta =f_edicion2.getValue('xbusca');
+
+          guardaIngreso();
+	          xautoriza='';
+	        break;
+
+       case 'f_edicion4':
+        guardaAgenda();
+        break;
+       case 'f_edicion5':
+        verAnalisis()
+        break;
+      }
+    }
+}
+function Refrescar(xmdocumento)
+{
+  d_gestion_pacientes.actualizar(xmdocumento);
+  d_gestion_pacientes.setFocus();
+}
+//--------- SECCION DE IMPRESION --------//
+function previewAnalisis()
+{
+  var fecha1 = f_edicion5.getValue('FECHA_DESDE');
+	var fecha2 = f_edicion5.getValue('FECHA_HASTA');
+  var segmento = f_edicion5.getValue('ID_M_TIPO_CLIENTES');
+  var cliente  = f_edicion5.getValue('ID_M_CLIENTES');
+	var fe=comparaFechas(fecha1,fecha2);
+	if (fe<0)
+	{
+	  alert('La fecha no puede ser anterior a la fecha actual');
+	  return;
+	}
+  contenedor.ocultar();
+  f_edicion5.ocultar();
+  impresora.origin = 'reportes/r_analisis_gestion_admin2';
+  impresora.setParam('FECHA_DESDE',fechaMDY(fecha1));
+  impresora.setParam('FECHA_HASTA',fechaMDY(fecha2));
+  impresora.setParam('ID_M_TIPO_CLIENTES',segmento);
+  impresora.setParam('ID_M_CLIENTES',cliente);
+  impresora.showDialog=true;
+  impresora.preview();
+}
+function ImprimeInforme()
+{
+  /*parent.ImpReporte('reportes/r_laboratorio','ID_M_EXAMENES=' + id); */
+  impresora.setParam('IDX', d_agenda.getValue('IDX'));
+  impresora.origin='reportes/r_agenda_calendario';
+  impresora.preview();
+  //ld_agenda.setFocus();
+}
+function VerPreview(fecha1,fecha2)
+{
+  impresora.origin = 'reportes/r_documentos_abiertos_fecha';
+  //impresora.setParam('ESTATUS','PNT');
+  impresora.setParam('ID_M_TIPO_CLIENTES',xsegmento);
+  impresora.setParam('ID_M_CLIENTES',xcliente);
+  impresora.setParam('FECHA_DESDE',fechaMDY(fecha1));
+  impresora.setParam('FECHA_HASTA',fechaMDY(fecha2));
+  impresora.showDialog=true;
+  impresora.preview();
+}
+
+function VerPreview2(fecha1,fecha2)
+{
+  impresora.origin = 'reportes/r_documentos_abiertos_saldo';
+  //impresora.setParam('ESTATUS','PNT');
+  impresora.setParam('ID_M_TIPO_CLIENTES',xsegmento);
+  impresora.setParam('ID_M_CLIENTES',xcliente);
+  impresora.setParam('FECHA_DESDE',fechaMDY(fecha1));
+  impresora.setParam('FECHA_HASTA',fechaMDY(fecha2));
+  impresora.showDialog=true;
+  impresora.preview();
+}
+function muestraLeyenda()
+{
+ for (var i=1;i<=11;i++)
+	{
+		var obj = document.getElementById('LEYENDA'+i);
+		obj.style.display='inline';
+	}
+ if(audita!='SI')
+ {
+		var obj = document.getElementById('LEYENDA10');
+		obj.style.display='none';
+ }
+}
+function OcultaLeyenda()
+{
+ for (var i=1;i<=10;i++)
+	{
+		var obj = document.getElementById('LEYENDA'+i);
+		obj.style.display='none';
+	}
+ if (tipo!="INFORMACION") muestraLeyenda();
+}
+function creaCookie()
+{
+  xpacientes=d_gestion_pacientes.getValue('ID_M_PACIENTES')
+  setCookie('LABORATORIO', xpacientes);
+  setCookie('DICOM3', xpacientes);
+  setCookie('INFORMES', xpacientes);
+  setCookie('EXAMENES', xpacientes);
+  setCookie('RECIPE', xpacientes);
+  setCookie('ANTECEDENTES', xpacientes);
+  setCookie('ID_X_M_DOCUMENTOS', d_gestion_pacientes.getValue('ID_X_M_DOCUMENTOS'));
+
+}
+function eliminaCookie()
+{
+  xpacientes='';
+  setCookie('LABORATORIO', xpacientes);
+  setCookie('DICOM3', xpacientes);
+  setCookie('INFORMES', xpacientes);
+  setCookie('EXAMENES', xpacientes);
+  setCookie('RECIPE', xpacientes);
+  setCookie('ANTECEDENTES', xpacientes);
+  setCookie('ID_X_M_DOCUMENTOS', '');
+}
+function onclose()
+{
+   switch (f_activo.nombre)
+   {
+     case 'f_edicion':
+         f_edicion.ocultar();
+         f_edicion.limpiar();
+      	 d_gestion_pacientes.setFocus();
+     break;
+
+     case 'f_edicion2':
+         f_edicion2.ocultar();
+         f_edicion2.limpiar();
+      	 d_gestion_pacientes.setFocus();
+     break;
+
+     case 'f_edicion4':
+       	d_agenda.mostrar();
+	   	d_agenda.setFocus();
+        setTimeout('ocultaCombo()',20);
+     break;
+   }
+}
+function ocultaCombo()
+{
+	d_gestion_pacientes.combo.style.display='none';
+}
+function OcultaLeyenda_cama_disponible(panel)
+{
+   if (panel==1)
+  {
+        var obj = document.getElementById('m_camas_disponibles_LEYENDA5');
+        obj.style.display='none';
+  }
+  else
+  {
+        var obj = document.getElementById('m_camas_disponibles_LEYENDA6');
+        obj.style.display='none';
+  }
+}
+
+function CambiaLeyenda_cama_disponible(panel)
+{
+  OcultaLeyenda_cama_disponible(panel);
+  if (panel==1)
+  {
+  		var obj = document.getElementById('m_camas_disponibles_LEYENDA6');
+        obj.style.display='inline';
+   		var obj1 = document.getElementById('m_camas_disponibles_LEYENDA7');
+        obj.style.display='inline';
+  }
+  else
+  {
+  		var obj = document.getElementById('m_camas_disponibles_LEYENDA5');
+        obj.style.display='inline';
+   		var obj1 = document.getElementById('m_camas_disponibles_LEYENDA7');
+        obj1.style.display='inline';
+  }
+}
+function Salir()
+{
+	 eliminaCookie();
+     parent.proceso.location.href = '../main/inicio.php';
+}
+function etiqLeyenda(tecla, texto, ancho, accion)
+{
+  var e = ' <td onselectstart="return false;" style="width:'+ancho+'px"; class="td_leyenda_inactiva" onmouseup="this.className=\'td_leyenda_activa\'" onmouseover="this.className=\'td_leyenda_activa\'" onmousedown="this.className=\'td_leyenda_click\'" onmouseout="this.className=\'td_leyenda_inactiva\'" onclick="'+accion+'">[<B>'+tecla+'</B>]<br>'+texto+'</td>';
+  return e;
+}
+function creaLeyenda()
+{
+  var l = '';
+  l += '<center><table class="tabla_leyenda">';
+  l += '<tr>';
+  l += etiqLeyenda('F12', 'Guardar', '90', 'Guardar();');
+  l += etiqLeyenda('ESC', 'Salir', '90', 'onclose();contenedor.ocultar();');
+  l += '</tr>';
+  l += '</table></center>';
+  return l;
+}
+function iniciar()
+{
+    d_gestion_pacientes.inicializa();
+	d_gestion_pacientes.mostrar();
+	d_gestion_pacientes.setFocus();
+
+    if (cookie3)
+    {
+      d_gestion_pacientes.buscar(cookie3,'=')
+      setCookie('ID_X_M_DOCUMENTOS','');
+    }
+    //else d_gestion_pacientes.buscar('*');
+
+    /*d_gestion_pacientes.buscar('*');
+    d_gestion_pacientes.localiza('ID_X_M_DOCUMENTOS',cookie3);*/
+
+    m_usuario.inicializa(false);
+    centrarObj(m_usuario.contenedor);
+
+    m_tipo_recaudos.inicializa(false);
+    centrarObj(m_tipo_recaudos.contenedor);
+    d_pagos.inicializa(false);
+    centrarObj(d_pagos.contenedor);
+    centrarObj(d_recaudos.contenedor);
+    d_auditoria.inicializa(false);
+    centrarObj(d_auditoria.contenedor);
+    centrarObj(d_recaudos.contenedor);
+
+    m_camas_disponibles_form.inicializa(false);
+    centrarObj(m_camas_disponibles_form.contenedor);
+
+    d_agenda.inicializa(false);
+    centrarObj(d_agenda.contenedor);
+    m_camas_disponibles.inicializa(false);
+    centrarObj(m_camas_disponibles.contenedor);
+
+    documento.inicializa(false);
+    centrarObj(documento.contenedor);
+
+    d_trayectoria.inicializa();
+    centrarObj(d_trayectoria.contenedor);
+
+    contenedor.inicializa();
+	  centrarObj(contenedor.contenedor);
+    pmenu.init();
+    f_edicion.inicializa();
+    f_edicion2.inicializa();
+    f_edicion4.inicializa();
+    f_edicion5.inicializa();
+
+    document.onclick=function() { if (parent.menu) parent.menu.reset(); }
+
+    addEvent(LEYENDA1, "click",   function() { t_d_gestion_pacientes('', _insert, d_gestion_pacientes.elementoXml()) } );
+	  addEvent(LEYENDA2, "click",   function() { t_d_gestion_pacientes('', _enter, d_gestion_pacientes.elementoXml()) });
+    addEvent(LEYENDA3, "click",   function() { t_d_gestion_pacientes('', _f2, d_gestion_pacientes.elementoXml()) } );
+    addEvent(LEYENDA4, "click",   function() { t_d_gestion_pacientes('', _f3, d_gestion_pacientes.elementoXml()) } );
+    addEvent(LEYENDA5, "click",   function() { t_d_gestion_pacientes('', _f4, d_gestion_pacientes.elementoXml()) } );
+   	addEvent(LEYENDA6, "click",   function() { t_d_gestion_pacientes('', _f6, d_gestion_pacientes.elementoXml()) } );
+    addEvent(LEYENDA7, "click",   function() { t_d_gestion_pacientes('', _f7, d_gestion_pacientes.elementoXml()) } );
+    addEvent(LEYENDA8, "click",   function() { t_d_gestion_pacientes('', _f8, d_gestion_pacientes.elementoXml()) } );
+    addEvent(LEYENDA9, "click",  function() { t_d_gestion_pacientes('', _f10, d_gestion_pacientes.elementoXml()) } );
+    addEvent(LEYENDA10, "click",  function() { t_d_gestion_pacientes('', _f11, d_gestion_pacientes.elementoXml()) } );
+	  addEvent(LEYENDA11, "click",  function() { t_d_gestion_pacientes('', _esc, d_gestion_pacientes.elementoXml()) } );
+
+    addEvent(d_recaudos_LEYENDA1, "click",  function() { t_d_recaudos('', _barra, d_recaudos.elementoXml()) } );
+    addEvent(d_recaudos_LEYENDA2, "click",  function() { t_d_recaudos('', _insert, d_recaudos.elementoXml()) } );
+    addEvent(d_recaudos_LEYENDA3, "click",  function() { t_d_recaudos('', _esc, d_recaudos.elementoXml()) } );
+
+    addEvent(m_tipo_recaudos_LEYENDA5, "click",  function() { t_m_tipo_recaudos('', _enter, m_tipo_recaudos.elementoXml()) } );
+    addEvent(m_tipo_recaudos_LEYENDA6, "click",  function() { t_m_tipo_recaudos('', _esc, m_tipo_recaudos.elementoXml()) } );
+
+    addEvent(d_agenda_LEYENDA1,  "click",   function() { t_d_agenda ('',_insert, d_agenda.elementoXml()) 	} );
+    addEvent(d_agenda_LEYENDA2,  "click",   function() { t_d_agenda ('',_barra, d_agenda.elementoXml()) 	} );
+    addEvent(d_agenda_LEYENDA3,  "click",   function() { t_d_agenda ('',_f2, d_agenda.elementoXml()) 	} );
+    addEvent(d_agenda_LEYENDA4,  "click",   function() { t_d_agenda ('',_esc, d_agenda.elementoXml()) 	} );
+
+    //addEvent(documento_LEYENDA5, "click",   function() { t_documento('', 13, documento.elementoXml()) } )
+	  addEvent(documento_LEYENDA1, "click",   function() { t_documento('', _esc, documento.elementoXml()) } );
+
+	  addEvent(d_trayectoria_LEYENDA1, "click",  function() { t_d_trayectoria('', _esc, d_trayectoria.elementoXml()) } );
+
+    addEvent(d_auditoria_LEYENDA1, "click",  function() { t_d_auditoria('', _esc, d_auditoria.elementoXml()) } );
+
+    addEvent(m_camas_disponibles_LEYENDA5, "click",  function() { t_m_camas_disponibles('', _enter, m_camas_disponibles.elementoXml()) } );
+    addEvent(m_camas_disponibles_LEYENDA6, "click",  function() { t_m_camas_disponibles('', _f4, m_camas_disponibles.elementoXml()) } );
+    addEvent(m_camas_disponibles_LEYENDA7, "click",  function() { t_m_camas_disponibles('', _esc, m_camas_disponibles.elementoXml()) } );
+
+    addEvent(d_pagos_LEYENDA1, "click",  function() { t_d_pagos('', _esc, d_pagos.elementoXml()) } );
+    addEvent(m_usuario_LEYENDA1, "click",  function() { t_m_usuario('', _enter, m_usuario.elementoXml()) } );
+    addEvent(m_usuario_LEYENDA2, "click",  function() { t_m_usuario('', _f4   , m_usuario.elementoXml()) } );
+    addEvent(m_usuario_LEYENDA3, "click",  function() { t_m_usuario('', _esc  , m_usuario.elementoXml()) } );
+
+}
+iniciar();
+
+</script>
+
+
+</body>
+</html>

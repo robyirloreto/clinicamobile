@@ -1,0 +1,354 @@
+<html lang="es">
+    <head>
+
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/themes/O24theme.css" />
+    <link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
+
+    <link rel="stylesheet" href="js/jquery.mobile-1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+	<script src="js/jquery.mobile-1.4.5/jquery-1.11.1.min.js"></script>
+	<script src="js/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <script type="text/javascript" src="js/jquery.cookie.js"></script>
+  <script type="text/javascript" src="js/robyir.js"></script>
+          
+
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    </head>
+
+    <body>
+
+        <div data-role="page" data-theme="b" id="main">
+        <div data-role="header"  data-add-back-btn="true" data-rel="back" ><h3>O24</h3></div>
+		<div data-role="content" >
+				<form id="frmlog" >
+				<div data-role="fieldcontain">
+					   <fieldset>
+						   <legend>Seleccione Cl&iacute;nica:</legend><br />
+						   <select id="cmbClinica" name="cmbClinica">
+							   <option value="CCFA" selected>CCFA</option>
+							   <option value="ASESA">ASESA</option>
+						   </select>
+					   </fieldset>
+				</div>
+				<div data-role="fieldcontain">
+					<fieldset>
+
+							<label for="txtuser">Usuario:</label>
+							<input type="text" name="txtuser" id="txtuser"/>
+							<label for="txtpass" >Contrase&ntilde;a</label>
+							<input type="password" name="txtpass" id="txtpass" autocomplete="off"/>
+
+
+
+
+							<input type="submit" value="Iniciar Sesi&oacute;n" id="inis" name="inis">
+
+					</fieldset>
+				</div>
+				</form>
+
+
+			</div>
+		<div data-role="footer" ><h3>Organizaci&oacuten Las 24 Horas</h3></div>
+	</div>
+
+<!--MENU PRINCIPAL -->
+
+		 <div data-role="page" data-theme="b" id="menuprincipal">
+			 <div data-role="header" id="cabeceramenu">
+
+			 </div>
+
+			<div data-role="content">
+					 <div data-role="collapsible-set" data-mini="true">
+					 	<div data-role="collapsible" data-mini="true">
+                              <h3>MEDICO</h3>
+                                <p>
+
+
+									   <ul data-role="listview" data-theme="b" data-inset="true">
+
+									    <li><a href="#" id="btntolistadoPac">Pacientes por ver</a></li>
+									    <li><a href="#" id="btntoHorarios">Horarios de Consulta</a></li>
+									    <li><a href="#" id="btntoCasosQuirPend">Casos Quir&uacute;rgicos Pendientes</a></li>
+
+								       </ul>
+
+
+                                </p>
+                        </div>
+
+                       <div data-role="collapsible" data-mini="true">
+                           <h3>HONORARIOS</h3>
+                            <p>
+                             <ul data-role="listview"  data-inset="true">
+                                 <li><a href="#" id="btntoPacVistos">Listado de Pacientes Vistos</a></li>
+                                 <li><a href="#" id="btntoHPPCobrar">HP Por Cobrar</a></li>
+
+             <li><a href="#" id="btntoHPCancelPPagar">HP Cancelados por Pagar</a></li>
+                                 <li><a href="#" id="btntoHCancelados">Resumen Honorarios Cancelados</a></li>
+                             </ul>
+                            </p>
+                        </div>
+
+                       <div data-role="collapsible" data-mini="true" display="false">
+                           <h3>ADMINISTRATIVO</h3>
+                            <p>
+                             <ul data-role="listview"  data-inset="true">
+                                 <li><a href="#" id="btntoFacturacion">Facturaci&oacute;n</a></li>
+                                 <li><a href="#" id="btntoCFC">Cobranza y Flujo de Caja</a></li>
+                             </ul>
+                            </p>
+                        </div>
+
+                        <div data-role="collapsible" data-mini="true">
+                            <h3>UTILES</h3>
+                             <p>
+                              <ul data-role="listview" data-inset="true">
+
+                                 <li><a href="#">Mensajer&iacute;a</a></li>
+                              </ul>
+                             </p>
+                         </div>
+                      </div>
+
+			</div>
+			<div data-role="footer" ><h3>Organizaci&oacuten Las 24 Horas</h3></div>
+		</div>
+
+
+
+
+  <!--MEDICO listado de pacientes-->
+
+   <div data-role="page" id="listadoPac" data-theme="b">
+            <div data-role="header" data-add-back-btn="true" data-rel="back" id="cabecerap">
+             &nbsp;
+            </div>
+
+            <div data-role="content" >
+
+               <ul data-role="listview" name="ulListviewPacientes" id="ulListviewPacientes" data-inset="true" >
+
+               </ul>
+            </div>
+            <div data-role="footer" style="text-align:center;"><h3>Organizaci&oacuten Las 24 Horas</h3></div>
+     </div>
+
+   <!--MEDICO listado de Horarios-->
+
+   <div data-role="page" id="listadoHor" data-theme="b">
+    <div data-role="header" data-add-back-btn="true" data-rel="back" id="cabecerahor">
+             &nbsp;
+    </div>
+
+    <div data-role="content" >
+
+               <ul data-role="listview" data-theme="a" name="ulListviewHorarios" id="ulListviewHorarios" data-inset="true">
+                 &nbsp;
+               </ul>
+     </div>
+      <div data-role="footer" style="text-align:center;"><h3>Organizaci&oacuten Las 24 Horas</h3></div>
+     </div>
+
+ <!--MEDICO listado de Casos Quirurgicos pendientes-->
+
+   <div data-role="page" id="listadoCasosQuir" data-theme="b">
+            <div data-role="header" data-add-back-btn="true" data-rel="back" id="cabeceracasosquir">
+             &nbsp;
+            </div>
+
+            <div data-role="content" >
+
+               <ul data-role="listview" data-theme="a" name="ulListviewCasosQuir" id="ulListviewCasosQuir" data-inset="true">
+                 &nbsp;
+               </ul>
+            </div>
+            <div data-role="footer" style="text-align:center;"><h3>Organizaci&oacuten Las 24 Horas</h3></div>
+     </div>
+
+
+      <!--HONORARIOS combo Pacientes vistos-->
+     <div data-role="page" id="cmblistadoPacV" data-theme="b">
+            <div data-role="header" data-add-back-btn="true" data-rel="back" id="cmbcabecerapacv">
+             &nbsp;
+            </div>
+
+            <div data-role="content" >
+
+               <ul data-role="listview" data-theme="a" name="cmbulListviewPacV" id="cmbulListviewPacV" data-inset="true">
+                 &nbsp;
+               </ul>
+            </div>
+            <div data-role="footer" style="text-align:center;"><h3>Organizaci&oacuten Las 24 Horas</h3></div>
+     </div>
+    <!--HONORARIOS Pacientes vistos-->
+     <div data-role="page" id="listadoPacV" data-theme="b" >
+            <div data-role="header" data-add-back-btn="true" data-rel="back" id="cabecerapacv">
+             &nbsp;
+            </div>
+
+            <div data-role="content" >
+
+               <ul data-role="listview" data-theme="a" name="ulListviewPacV" id="ulListviewPacV" data-inset="true" data-filter="true" data-filter-placeholder="B&uacute;squeda de Pacientes">
+                 &nbsp;
+               </ul>
+            </div>
+            <div data-role="footer" style="text-align:center;"><h3>Organizaci&oacuten Las 24 Horas</h3></div>
+     </div>
+
+   <!--HONORARIOS combo HP Por Cobrar (Seleccionar mes)-->
+     <div data-role="page" id="cmblistadoHPPorCobrar" name="cmblistadoHPPorCobrar" data-theme="b">
+          <div data-role="header" data-add-back-btn="true" data-rel="back" id="cmbcabecerahppc">
+             &nbsp;
+            </div>
+
+            <div data-role="content" >
+
+               <ul data-role="listview" data-theme="a" name="cmbulListviewHPPorCobrar" id="cmbulListviewHPPorCobrar" data-inset="true">
+               </ul>
+            </div>
+            <div data-role="footer" style="text-align:center;"><h3>Organizaci&oacuten Las 24 Horas</h3>
+            </div>
+     </div>
+
+     <!--HONORARIOS HP Por Cobrar-->
+     <div data-role="page" id="listadoHPPorCobrar" data-theme="b">
+            <div data-role="header" data-add-back-btn="true" data-rel="back" id="cabecerahppc">
+             &nbsp;
+            </div>
+
+            <div data-role="content" >
+              <ul data-role="listview" data-theme="a" name="ulListviewHPPorCobrar" id="ulListviewHPPorCobrar" data-inset="true" data-filter="true" data-filter-placeholder="B&uacute;squeda de Pacientes">
+               </ul>
+            </div>
+            <div data-role="footer" style="text-align:center;">
+                 <h3>Organizaci&oacuten Las 24 Horas</h3>
+            </div>
+     </div>
+
+     <!--HONORARIOS HP Por Pagar-->
+     <div data-role="page" id="listadoHPCancelPorPagar" name="listadoHPCancelPorPagar"data-theme="b" >
+            <div data-role="header" data-add-back-btn="true" data-rel="back" id="cabecerahppp">
+             &nbsp;
+            </div>
+
+            <div data-role="content" >
+
+               <ul data-role="listview" data-theme="a" name="ulListviewHPCancelPorPagar" id="ulListviewHPCancelPorPagar" data-inset="true" data-filter="true" data-filter-placeholder="B&uacute;squeda de Pacientes">
+                 &nbsp;
+               </ul>
+            </div>
+            <div data-role="footer" style="text-align:center;"><h3>Organizaci&oacuten Las 24 Horas</h3></div>
+     </div>
+
+
+    <!--HONORARIOS combo Resumen H Cancelados (Seleccionar mes)-->
+     <div data-role="page" id="cmblistadoHCancelados" data-theme="b">
+            <div data-role="header" data-add-back-btn="true" data-rel="back" id="cmbcabecerahcancelados">
+             &nbsp;
+            </div>
+
+            <div data-role="content" >
+
+               <ul data-role="listview" data-theme="a" name="cmbulListviewHCancelados" id="cmbulListviewHCancelados" data-inset="true">
+                 &nbsp;
+               </ul>
+            </div>
+            <div data-role="footer" style="text-align:center;"><h3>Organizaci&oacuten Las 24 Horas</h3></div>
+     </div>
+
+
+     <!--HONORARIOS Resumen H Cancelados-->
+     <div data-role="page" id="listadoHCancelados" data-theme="b" >
+            <div data-role="header" data-add-back-btn="true" data-rel="back" id="cabecerahcancelados">
+             &nbsp;
+            </div>
+
+            <div data-role="content" >
+
+               <ul data-role="listview" data-theme="a" name="ulListviewHCancelados" id="ulListviewHCancelados" data-inset="true" data-filter="true" data-filter-placeholder="B&uacute;squeda de Pacientes">
+                 &nbsp;
+               </ul>
+            </div>
+            <div data-role="footer" style="text-align:center;"><h3>Organizaci&oacuten Las 24 Horas</h3></div>
+     </div>
+
+<!--ADMINISTRATIVO-->
+
+<!--ADMINISTRATIVO combo meses Facturacion-->
+
+     <div data-role="page" id="cmblistadoFacturacion" data-theme="b">
+            <div data-role="header" data-add-back-btn="true" data-rel="back" id="cmbcabecerafacturacion">
+             &nbsp;
+            </div>
+
+            <div data-role="content" >
+
+               <ul data-role="listview" data-theme="a" name="cmbulListviewFacturacion" id="cmbulListviewFacturacion" data-inset="true">
+                 &nbsp;
+               </ul>
+            </div>
+            <div data-role="footer" style="text-align:center;"><h3>Organizaci&oacuten Las 24 Horas</h3></div>
+     </div>
+    <!--ADMINISTRATIVO listado Facturacion-->
+     <div data-role="page" id="listadoFacturacion" data-theme="b" >
+            <div data-role="header" data-add-back-btn="true" data-rel="back" id="cabecerafacturacion">
+             &nbsp;
+            </div>
+
+            <div data-role="content" >
+
+              <div id="tablaVerFacturacion" class="ui-grid-c">
+            
+                
+                    <div class="ui-block-a">Documento</div>
+                    <div class="ui-block-b">Tipo</div>
+                    <div class="ui-block-c">Cantidad</div>
+                    <div class="ui-block-d">Neto</div>
+               
+             
+            </div>
+            </div>
+            <div data-role="footer" style="text-align:center;"><h3>Organizaci&oacuten Las 24 Horas</h3></div>
+     </div>
+
+<!--------------------------------------------------------------->
+
+<!--ADMINISTRATIVO combo meses CFC-->
+     <div data-role="page" id="cmblistadoCFC" data-theme="b">
+            <div data-role="header" data-add-back-btn="true" data-rel="back" id="cmbcabeceracfc">
+             &nbsp;
+            </div>
+
+            <div data-role="content" >
+
+               <ul data-role="listview" data-theme="a" name="cmbulListviewCFC" id="cmbulListviewCFC" data-inset="true">
+                 &nbsp;
+               </ul>
+            </div>
+            <div data-role="footer" style="text-align:center;"><h3>Organizaci&oacuten Las 24 Horas</h3></div>
+     </div>
+    <!--ADMINISTRATIVO listado Facturacion-->
+     <div data-role="page" id="listadoCFC" data-theme="b" >
+            <div data-role="header"  data-add-back-btn="true" data-rel="back" id="cabeceracfc">
+             &nbsp;
+            </div>
+
+            <div data-role="content" >
+
+              <div id="tablaVerCFC" class="ui-grid-a">
+            
+                 
+                    <div class="ui-block-a">Tipo</div>
+                    <div class="ui-block-b">Monto</div>
+               
+             
+            </div>
+            </div>
+            <div data-role="footer" style="text-align:center;"><h3>Organizaci&oacuten Las 24 Horas</h3></div>
+     </div>
+ </body>
+
+</html>

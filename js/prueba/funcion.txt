@@ -1,0 +1,5 @@
+function unformat(valor)
+{
+   if (valor) return parseFloat(valor.replace(/,/g, ''));
+   else return 0;
+}

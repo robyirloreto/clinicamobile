@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+ <widget xmlns = "http://www.w3.org/ns/widgets"
+    xmlns:gap  = "http://phonegap.com/ns/1.0"
+    id         = "com.phonegap.example"
+    versionCode="10"
+    version    ="1.0.0">
+        
+     <name>clinicamobile</name>   
+     <description>Bienvenidos al Sistema O24 mobile</description>
+     <author>
+          Dpto de Sistemas. Septiembre 2015
+     </author>
+  </widget>
