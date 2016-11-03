@@ -75,7 +75,7 @@ $('#frmlog').submit(function(){
 		   setCookie("clinica",respuesta.clinica);
 		   setCookie("login",respuesta.login);
 
-           var cabecerageneral="<center><h3>O24 "+getCookie('clinica')+"</h3></center>Usuario: "+getCookie('nombres')+"<br/> Grupo: "+getCookie('grupo');
+           var cabecerageneral="<a href='#' data-rel='back'>Atras</a><center><h3>O24 "+getCookie('clinica')+"</h3></center>Usuario: "+getCookie('nombres')+"<br/> Grupo: "+getCookie('grupo')+"<a href='#' onclick='cerrarSesion();'>Salir</a>";
             
             
              $('#cabeceramenu').html(cabecerageneral);

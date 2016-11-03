@@ -1,0 +1,1000 @@
+  244  exit
+  245  brasero
+  246  yum install brasero-cdrkit
+  247  su -oracle
+  248  su - oracle
+  249  exit
+  250  arping 10.2.150.60
+  251  exit
+  252  ssh root@10.2.150.60
+  253  clear
+  254  ./vnc
+  255  cd /opt/lampp
+  256  cd htdocs/
+  257  scp -r clinicamobile/ root@10.1.150.1:/opt/lampp/clinicamobile
+  258  ssh root@10.1.150.1
+  259  scp -r clinicamobile/ root@10.1.150.1:/opt/lampp/htdocs/clinicamobile
+  260  ssh root@10.1.150.1
+  261  scp -r clinicamobile/ root@10.1.150.1:/opt/lampp/htdocs/clinicamobile
+  262  ssh root@10.1.150.1
+  263  ifconfig
+  264  clear
+  265  ssh root@10.2.150.60
+  266  ifconfig
+  267  ssh root@10.1.150.1
+  268  exit
+  269  cd /opt/lampp/htdocs/
+  270  scp -r clinicamobile/ root@10.1.150.1:/opt/lampp/htdocs
+  271  exit
+  272  ssh oracle@10.2.150.70
+  273  crontab -l
+  274  ssh root@10.1.150.80
+  275  clear
+  276  exit
+  277  ssh root@10.1.150.70
+  278  ssh root@10.2.150.70
+  279  exit
+  280  ssh root@10.1.150.80
+  281  exit
+  282  /opt/lampp/lampp securyty
+  283  /opt/lampp/lampp security
+  284  /opt/lampp/lampp restart
+  285  /opt/lampp/lampp security
+  286  /opt/lampp/lampp restart
+  287  shutdown -h now
+  288  echo $JAVA_HOME
+  289  echo JAVA_HOME
+  290  echo $JAVA_HOME
+  291  java -v
+  292  java -version
+  293  cd /home/oracle/Descargas
+  294  mkdir /usr/java/tomcat6
+  295  cp apache-tomcat-6.0.45.tar.gz /usr/java/tomcat6/
+  296  clear
+  297  cd /usr/java/tomcat6/
+  298  ls
+  299  tar zxvf apache-tomcat-6.0.45.tar.gz 
+  300  ls
+  301  cd apache-tomcat-6.0.45/
+  302  clear
+  303  ls
+  304  cd bin/
+  305  ls
+  306  ./startup.sh 
+  307  find /usr -name jdk*
+  308  find /usr -name jre*
+  309  pwd
+  310  gedit /usr/java/tomcat6/apache-tomcat-6.0.45/bin/catalina.sh
+  311  nano /usr/java/tomcat6/apache-tomcat-6.0.45/bin/catalina.sh
+  312  ./startup.sh 
+  313  set $JRE_HOME=Using CATALINA_BASE:   /usr/java/tomcat6/apache-tomcat-6.0.45
+  314  Using CATALINA_HOME:   /usr/java/tomcat6/apache-tomcat-6.0.45
+  315  Using CATALINA_TMPDIR: /usr/java/tomcat6/apache-tomcat-6.0.45/temp
+  316  Using JRE_HOME:        /usr
+  317  ~/.bashrc
+  318  clear
+  319  nano ~/.bash_profile
+  320  ~/.bash_profile
+  321  ./~/.bash_profile
+  322  ~/.bash_profile
+  323  ./startup.sh 
+  324  export JRE_HOME=/usr/java/jdk1.8.0_11/jre
+  325  ./startup.sh 
+  326  nano /usr/java/tomcat6/apache-tomcat-6.0.45/bin/catalina.sh
+  327  ./startup.sh 
+  328  shutdown -r now
+  329  cd /usr/java/tomcat6/apache-tomcat-6.0.45.tar.gz /usr/java/tomcat6/
+  330  cd /usr/java/tomcat6/apache-tomcat-6.0.45/bin/
+  331  ./startup.sh 
+  332  pwd
+  333  chmod -R 777 /usr/java/tomcat6/apache-tomcat-6.0.45/webapps
+  334  ssh root@10.2.150.2
+  335  exit
+  336  yum install php-gtk2
+  337  ./vnc
+  338  exit
+  339  fdisk -r
+  340  fdisk -l
+  341  cd /run/media/oracle/ADRIANA
+  342  pwd
+  343  df -h
+  344  cd ..
+  345  umount /dev/sdb
+  346  mkfs.vfat -F 32 -n ADRIANA /dev/sdb
+  347  fdisk -l
+  348  mkfs.vfat -F 32 -n ADRIANA /dev/sdb
+  349  umount /dev/sdb
+  350  mkfs.vfat -F 32 -n ADRIANA /dev/sdb1
+  351  mkfs.vfat -F 32 -n ADRIANA /dev/sdb
+  352  gparted
+  353  mkfs.vfat -F 32 -n ADRIANA /dev/sdb
+  354  mkfs.vfat -F 32 -n /dev/sdb
+  355  mkfs.vfat -F 32 -n ADRIANA /dev/sdb
+  356  gparted
+  357  exit
+  358  clear
+  359  ssh root@10.2.150.70
+  360  clear
+  361  ifconfig
+  362  clear
+  363  ./vnc
+  364  ping 10.1.5.1
+  365  ping 10.2.6.3
+  366  ping 10.2.6.4
+  367  ping 10.2.6.5
+  368  ping 10.2.6.6
+  369  ping 10.2.6.7
+  370  ping 10.2.6.3
+  371  ping 10.2.6.1
+  372  ping 10.2.6.2
+  373  ping 10.2.6.3
+  374  ping 10.2.6.4
+  375  ping 10.2.6.5
+  376  ping 10.2.6.6
+  377  ping 10.2.6.5
+  378  clear
+  379  ./vnc
+  380  exit
+  381  man fsck
+  382  fsck -a
+  383  umount /dev/sda
+  384  fsck -a
+  385  nano /etc/fstab
+  386  fsck -a
+  387  shutdown -r now
+  388  startx
+  389  cd /home/oracle
+  390  clear
+  391  cd /home
+  392  ls
+  393  pwd
+  394  ls
+  395  ls
+  396  pwd
+  397  cd /home/oracle
+  398  ls
+  399  df -h
+  400  fsck
+  401  shutdown -r now
+  402  exit
+  403  ifconfig
+  404  fsck -a
+  405  man fsck 
+  406  fsck -s
+  407  fsck -y
+  408  man fsck 
+  409  fsck -y -M
+  410  s
+  411  fsck -s -M
+  412  man fsck 
+  413  man fsck 
+  414  fsck -n -M
+  415  shutdown -r now
+  416  chmod a+x exp.sh 
+  417  exit
+  418  chmod -R 777 /home/oracle/respaldosprueba/
+  419  exit
+  420  free -m
+  421  echo 80 > /proc/sys/vm/swappiness
+  422  nano /etc/sysctl.conf
+  423  shutdown -r now
+  424  nano /etc/fstab
+  425  shutdown -r now
+  426  nano /etc/modprobe.d
+  427  nano /etc/modprobe.d/openfwwf.conf 
+  428  nano /etc/modprobe.d/options
+  429  clear
+  430  nano /etc/modprobe.d/options
+  431  find / -name options
+  432  smartctl -a /dev/sda
+  433  smartctl -a /dev/sda | grep Load
+  434  hdparm -B 255 /dev/sda
+  435  smartctl -a /dev/sda | grep Count
+  436  df -h
+  437  fsck /dev/sda
+  438  umount /dev/sda
+  439  umount /dev/sda1
+  440  umount /dev/sda2
+  441  umount /dev/sda3
+  442  umount /dev/sda34
+  443  umount /dev/sda35
+  444  fsck /dev/sda
+  445  fsck /dev/sda1
+  446  fsck /dev/sda2
+  447  fsck /dev/sda3
+  448  fsck /dev/sda4
+  449  fsck /dev/sda5
+  450  badblock /dev/sda > badblocks
+  451  yum install badblock
+  452  exit
+  453  cd /home/oracle
+  454  ls insta* -ls
+  455  find / -name instaladores
+  456  find / -name runInstaller
+  457  find /home -name runInstaller
+  458  ls
+  459  cd Documentos/
+  460  ls
+  461  cd /
+  462  ls
+  463  find / -name instalado*
+  464  cd /home/oracle/bkrobyir/
+  465  clear
+  466  cd instaladores/
+  467  ls
+  468  scp -r database/ oracle@10.100.150.70:/home/oracle
+  469  exit
+  470  ssh root@10.1.150.80
+  471  /opt/lampp/lampp status
+  472  /opt/lampp/lampp start
+  473  xkill
+  474  pkill firefox*
+  475  ping 10.2.150.1
+  476  ping 10.2.150.70
+  477  ./vnc
+  478  ssh root@10.2.150.70
+  479  ping 186.95.51.113 
+  480  ping cmlg1.ddns.org
+  481  ping cmlg1.ddns.com
+  482  ping cmlg1.ddns.org
+  483  ping 10.2.150.100
+  484  cd /home/oracle/Descargas/OracleLinux7.2
+  485  sha1sum OracleLinux-R7-U2-Server-x86_64-dvd.iso -c OracleLinux-R7-U2-Server-x86_64-dvd.sha1sum
+  486  man sha1sum
+  487  sha1sum -c OracleLinux-R7-U2-Server-x86_64-dvd.iso
+  488  sha1sum OracleLinux-R7-U2-Server-x86_64-dvd.iso
+  489  clear
+  490  brasero
+  491  ls
+  492  sha1sum OracleLinux-R7-U2-Server-x86_64-dvd.iso -c OracleLinux-R7-U2-Server-x86_64-dvd.sha1sum
+  493  sha1sum OracleLinux-R7-U2-Server-x86_64-dvd.iso -c OracleLinux-R7-U2-Server-x86_64-dvd.sha1
+  494  cat OracleLinux-R7-U2-Server-x86_64-dvd.sha1
+  495  cat OracleLinux-R7-U2-Server-x86_64-dvd.sha1sum
+  496  ls
+  497  cat OracleLinux-R7-U2-Server-x86_64-dvd.iso.sha1sum
+  498  sha1sum OracleLinux-R7-U2-Server-x86_64-dvd.iso -c OracleLinux-R7-U2-Server-x86_64-dvd.iso.sha1sum
+  499  cat OracleLinux-R7-U2-Server-x86_64-dvd.iso.sha1sum
+  500  sha1sum OracleLinux-R7-U2-Server-x86_64-dvd.iso -c 03e048f23d798c8e8e7935fab76245c2f1341378  OracleLinux-R7-U2-Server-x86_64-dvd.iso
+  501  clear
+  502  yum install nero
+  503  ssh root@10.1.150.70
+  504  ssh root@10.1.150.80
+  505  clear
+  506  ls
+  507  cd ..
+  508  ls
+  509  scp -r OracleLinux7.2/ root@10.1.150.80:/mnt/data/ACCCFA/Archivos\ Comunes/Sistemas/Hardware/Utilidades/programas/ISOS
+  510  scp -r OracleLinux7.2/ root@10.1.150.80:/mnt/data/ACCCFA/ARCHIVOS\ COMUNES/Sistemas/Hardware/Utilidades/programas/ISOS
+  511  scp -r OracleLinux7.2/ root@10.1.150.80:/mnt/data/ACCCFA/Sistemas/Hardware/Utilidades/programas/ISOS
+  512  scp -r OracleLinux7.2/ root@10.1.150.80:/mnt/data/ACCCFA/Sistemas/Hardware/ROBYIR/Utilidades/programas/ISOS
+  513  ssh root@10.1.150.80
+  514  scp -r OracleLinux7.2/ root@10.1.150.80:/mnt/data/ACCCFA/ARCHIVOS\ COMUNES/Sistemas/Hardware/ROBYIR/Utilidades/programas/ISOS/
+  515  scp -r OracleLinux7.2/ root@10.1.150.80:"/mnt/data/ACCCFA/ARCHIVOS\ COMUNES/Sistemas/Hardware/ROBYIR/Utilidades/programas/ISOS/"
+  516  ifconfig
+  517  clear
+  518  ssh root@10.1.150.80
+  519  clear
+  520  ping cmlg1.ddns.net
+  521  ssh oracle@10.2.150.70
+  522  cd ..
+  523  ./vnc
+  524  ssh root@10.2.150.70
+  525  ssh root@10.2.150.60
+  526  clear
+  527  ssh root@10.1.150.80
+  528  clear
+  529  find /home -name pago*
+  530  cd /home/oracle
+  531  rm bkerika/ -rf
+  532  clear
+  533  ping 10.2.150.1
+  534  ./vnc
+  535  ssh root@10.1.150.70
+  536  ssh root@10.1.150.80
+  537  clear
+  538  ssh root@10.2.150.60
+  539  clear
+  540  exit
+  541  ssh root@10.1.150.80
+  542  ifconfig
+  543  clear
+  544  chmod -R 777 CCFADB* 
+  545  exit
+  546  cat history
+  547  pwd
+  548  cd /home/oracle
+  549  nano history
+  550  cat history > history.txt
+  551  history > history.txt
+  552  cat history.txt
+  553  nano history.txt
+  554  exit
+  555  ssh root@10.2.150.60
+  556  clear
+  557  exit
+  558  scp root@10.2.150.70:/etc/init.d/dbora /etc/init.d
+  559  nano /etc/init.d/dbora
+  560  cd /etc/init.d/dbora
+  561  cd /etc/init.d/
+  562  chmod 750 /etc/init.d/dbora
+  563  chkconfig --add dbora
+  564  ln -s /etc/init.d/dbora /etc/rc.d/rc0.d/K01dbora
+  565  ln -s /etc/init.d/dbora /etc/rc.d/rc3.d/S99dbora
+  566  ln -s /etc/init.d/dbora /etc/rc.d/rc5.d/S99dbora
+  567  chgrp dba dbora
+  568  chmod 750 dbora
+  569  shutdown -r now
+  570  ntsrv
+  571  sysnvr
+  572  ntsysv
+  573  shutdown -r now
+  574  yum install rlwrap
+  575  alias rlsqlplus='rlwrap sqlplus'
+  576  alias rlrman='rlwrap rman'
+  577  exit
+  578  /u01/app/oracle/product/11.2.0/db_1/deinstall/deinstall
+  579  exit
+  580  cd /
+  581  rm /u01 -rf
+  582  clear
+  583  ls
+  584  cd /home/oracle
+  585  ls
+  586  cd tablespaceso24
+  587  ls
+  588  rm * -rf
+  589  clear
+  590  df -h
+  591  cd /home/oracle/Descargas
+  592  ls
+  593  rm {x,v,w,s,S,r,P}* -rf
+  594  ls
+  595  rm {p}* -rf
+  596  ls
+  597  rm {'pro'}* -rf
+  598  ls
+  599  ls -lath
+  600  df -h
+  601  cd /home
+  602  ls
+  603  cd oracle
+  604  ls
+  605  cd /tmp
+  606  ls
+  607  rm * -rf
+  608  cd ..
+  609  ls
+  610  cd media/
+  611  ls
+  612  cd ..
+  613  clear
+  614  cd /home/oracle
+  615  cd dataTables/
+  616  cd ..
+  617  ls
+  618  find / -name *runInstaller*
+  619  find / -name archivos*
+  620  find / -name *nstalacion*
+  621  find / -name database
+  622  cp -r /home/oracle/bkrobyir/instaladores/database /home/oracle 
+  623  mv /home/oracle/bkrobyir/instaladores/database /home/oracle 
+  624  rm database/ -rf
+  625  mv /home/oracle/bkrobyir/instaladores/database /home/oracle 
+  626  cd database/
+  627  ls
+  628  gedit history
+  629  cd ..
+  630  pwd
+  631  history > history.txt
+  632  gedit history.txt 
+  633  pkill gedit
+  634  gedit history.txt 
+  635  pkill gedit
+  636  exit
+  637  cd /home/oracle
+  638  exit
+  639  mkdir -p /u01/app/oracle/product/11.2.0/db_1
+  640  chown -R oracle:oinstall /u01
+  641  chmod -R 775 /u01
+  642  find / -name o24
+  643  find / -name dbca 
+  644  rm /etc/oratab
+  645  rm /var/opt/oracle/oratab -rf
+  646  cd /tmp
+  647  df -h
+  648  ls
+  649  rm * -rf
+  650  tmpfs    /tmp    tmpfs    size=2000m
+  651  ls
+  652  rm * -rf
+  653  ls
+  654  cd ..
+  655  pwd
+  656  mkdir tempo
+  657  cd tmp/
+  658  ls
+  659  cd /home/oracle/
+  660  mkdir tempo
+  661  mount tempo/ /tmp
+  662  cd ..
+  663  mkdir tempo
+  664  mount tempo/ /tmp
+  665  nano /etc/fstab
+  666  tmpfs /tmp tmpfs nodev,nosuid,size=5000m
+  667  yum install tmpfs
+  668  find / -name tmpfs
+  669  nano /etc/fstab
+  670  echo "tmpfs /tmp tmpfs rw,noexec,nosuid,async,noatime,size=1G,nodev 0 0" >> /etc/fstab
+  671  nano /etc/fstab
+  672  tmpfs /tmp tmpfs rw,noexec,nosuid,async,noatime,size=2G,nodev 0 0
+  673  umount /tmp
+  674  xkill
+  675  umount /tmp
+  676  cd /tmp
+  677  ls
+  678  rm * -rf
+  679  cd ..
+  680  umount /tmp
+  681  fuser(1)
+  682  umount /tmp
+  683  fuser(1)
+  684  umount /tmp
+  685  clear
+  686  cd /tmp
+  687  ls
+  688  rm * -rf
+  689  clear
+  690  exit
+  691  nano /etc/fstab
+  692  ssh root@10.1.150.70
+  693  nano /etc/fstab
+  694  df -h
+  695  cd /tmp
+  696  ls
+  697  rm * -rf
+  698  df -h
+  699  umount /dev/shm
+  700  umount tmp
+  701  umount /tmp
+  702  umount -f /tmp
+  703  man umount 
+  704  umount -a /tmp
+  705  clear
+  706  ls
+  707  df -h
+  708  nano /etc/fstab
+  709  cd ..
+  710  pwd
+  711  exit
+  712  chown -R oracle:oinstall /home/oracle
+  713  exit
+  714  cd /home/oracle
+  715  mkdir bklaboratorio
+  716  df -h
+  717  cd bklaboratorio/
+  718  pwd
+  719  exit
+  720  yum install git
+  721  nano /etc/gitconfig
+  722  find / -name gitconfig
+  723  cd /etc/gitconfig
+  724  find / -name gitconfig
+  725  find / -name gitconfig -type d
+  726  yum remove git
+  727  yum install curl-devel expat-devel gettext-devel   openssl-devel zlib-devel
+  728  find / -name gitconfig
+  729  find / -name .gitconfig
+  730  yum install git
+  731  git --version
+  732  su testuser
+  733  su git
+  734  git config --global user.name "testuser"
+  735  git config --global user.email "robyirloreto@gmail.com"
+  736  git config --list
+  737  which git
+  738  git --version
+  739  git config -l
+  740  git config --global
+  741  git config --global user.name "Robyir Loreto"
+  742  git config --global user.email "robyirloreto@gmail.com"
+  743  git config -l
+  744  ls -a
+  745  nano .gitconfig 
+  746  git help config
+  747  yum -y install man-pages-es man-pages-es-extra
+  748  git init
+  749  nano ejemplo.txt
+  750  git status
+  751  git add ejemplo.txt
+  752  git status
+  753  clear
+  754  git status
+  755  mkdir repositorio
+  756  git init
+  757  rm .git -rf
+  758  cd repositorio/
+  759  git init
+  760  cd ..
+  761  git add ejemplo.txt
+  762  git status
+  763  git status -l
+  764  clear
+  765  git add ejemplo.txt
+  766  git init
+  767  rm .git -rf
+  768  cd repositorio/
+  769  ls
+  770  git init
+  771  ls
+  772  cd .git
+  773  ls
+  774  nano config
+  775  cd ..
+  776  git add ejemplo.txt
+  777  cat $GIT_DIR
+  778  echo GIT_DIR
+  779  echo $GIT_DIR
+  780  nano .bash_profile 
+  781  export GIT_DIR='/home/oracle/respositorio'
+  782  echo $GIT_DIR
+  783  git add ejemplo.txt
+  784  cd repositorio/
+  785  git init
+  786  cd ..
+  787  git add ejemplo.txt
+  788  git status
+  789  git --status
+  790  git -status
+  791  git status
+  792  chmod -R 777 repositorio/
+  793  exit
+  794  /opt/lampp/lampp start
+  795  /opt/lampp/lampp restart
+  796  exit
+  797  /opt/lampp/lampp restart
+  798  exit
+  799  yum install subversion
+  800  mkdir /root/repos
+  801  svnadmin create /root/repos/clinicamobile
+  802  svnserve -d -r /root/repos
+  803  netstat -anp | grep svn
+  804  cd /root/repos/clinicamobile/
+  805  ls
+  806  cd ..
+  807  ls
+  808  find /etc -name svnserve.conf
+  809  find / -name svnserve.conf
+  810  pwd
+  811  cd clinicamobile/conf/
+  812  cp svnserve.conf svnserve.confBK 
+  813  nano svnserve.conf
+  814  nano passwd 
+  815  nano authz 
+  816  svn checkout --username robyir svn://10.1.150.105:3690/clinicamobile/
+  817  svnserve -d -r /srv/svn
+  818  find / -name svn
+  819  svnserve -d -r /usr/bin/svn
+  820  netstat -anp | grep svn
+  821  mkdir /root/repos
+  822  svnserve -d -r /root/repos
+  823  netstat -anp | grep svn
+  824  kill -9 4529
+  825  netstat -anp | grep svn
+  826  mkdir /root/repos
+  827  svnserve -d -r /root/repos
+  828  netstat -anp | grep svn
+  829  kill -9 9134
+  830  sh /home/oracle/vnc
+  831  sh /home/oracle/.vnc
+  832  /home/oracle/.vnc
+  833  cd /home/oracle
+  834  ./vnc
+  835  exit
+  836  /opt/lampp/lampp start
+  837  ping google.com
+  838  ./vnc
+  839  ping 10.2.150.80
+  840  ping 10.2.150.60
+  841  pkill
+  842  xkill
+  843  ping 10.2.150.60
+  844  ./vnc
+  845  ping 10.2.150.60
+  846  exit
+  847  chmod -R 777 /opt/lampp/htdocs/clinicamobile
+  848  ping 10.2.150.2
+  849  ssh root@10.1.150.70
+  850  cd /home/oracle/DIR_O24/
+  851  ls
+  852  nano InfoImportCCFADB011020160100.log
+  853  exit
+  854  find / -name sublime*
+  855  find / -name *jshin*
+  856  find  /home/oracle/.config/sublime-text-3 -name *jshin*
+  857  find  /home/oracle/.config/sublime-text-3 -name *jshin
+  858  find  /home/oracle/.config/sublime-text-3 -name jshin*
+  859  npm install -g jshint
+  860  find / -name npm
+  861  git clone https://github.com/victorporof/Sublime-JSHint.git ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/Sublime-JSHint
+  862  git clone https://github.com/victorporof/Sublime-JSHint.git ~/.config/sublime-text-3/Packages/Sublime-JSHint
+  863  cd /opt
+  864  ls
+  865  find /home/oracle/ -name sublime*
+  866  find /home/oracle/ -name subl
+  867  find /home/oracle/ -name sublime_text
+  868  find / -name sublime*
+  869  find /home/oracle -name sublime*
+  870  /home/oracle/Documentos/querys/Sublime Text 2/sublime_text
+  871  sh /home/oracle/Documentos/querys/Sublime Text 2/sublime_text
+  872  find / -name sublime_text
+  873  ls
+  874  sh /home/oracle/ -name subl*
+  875  find /home/oracle/ -name subl*
+  876  find /home/oracle/Documentos -name subl*
+  877  find / -name subl*
+  878  cp ~/.config/sublime-text-3/Packages/Sublime-JSHint
+  879  ls
+  880  sublime_text
+  881  ls
+  882  scripts
+  883  celar
+  884  clear
+  885  ls
+  886  py JSHint.py
+  887  python JSHint.py
+  888  ls
+  889  cat Default\ \(Linux\).sublime-keymap 
+  890  exit
+  891  ssh root@10.1.150.80
+  892  pwd
+  893  pkill firefox
+  894  clear
+  895  exit
+  896  shutdown -h now
+  897  /opt/lampp/lampp restart
+  898  ping 10.2.150.1
+  899  cd /home/oracle/Descargas/conector
+  900  ls
+  901  md5sum sqlncli-11.0.1790.0.tar.gz 
+  902  ls
+  903  rm sqlncli-11.0.1790.0 -rf
+  904  tar xvf sqlncli-11.0.1790.0.tar.gz 
+  905  ls
+  906  cd sqlncli-11.0.1790.0/
+  907  clear
+  908  ls
+  909  ./ build_dm.sh --help
+  910  ./build_dm.sh --help
+  911  ls
+  912  ./install.sh --help
+  913  ./install.sh verify
+  914  cat /tmp/sqlncli.9944.17046.7923/install.log
+  915  ./install.sh install
+  916  ./build_dm.sh --download-url=file://unixODBC-2.3.0.tar.gz
+  917  ./build_dm.sh --download-url=file:http://www.unixodbc.org/unixODBC-2.3.4.tar.gz
+  918  ./install.sh install
+  919  wget http://www.unixodbc.org/unixODBC-2.3.4.tar.gz
+  920  ls
+  921  cd..
+  922  cd ..
+  923  ls
+  924  cd unixODBC-2.3.0/
+  925  clear
+  926  ls
+  927  make
+  928  Make
+  929  make
+  930  make install
+  931  ./configure
+  932  make
+  933  make install
+  934  cd ..
+  935  ls
+  936  cd sqlncli-11.0.1790.0/
+  937  clear
+  938  ls
+  939  ./install install.sh 
+  940  ./install.sh install
+  941  cd /home/oracle/
+  942  ./vnc
+  943  cd /opt/lampphtd
+  944  clear
+  945  pwd
+  946  cd /opt/lampp/htdocs/
+  947  clear
+  948  ls
+  949  mkdir version
+  950  cd version/
+  951  nano index.php
+  952  cd ..
+  953  chmod -R 777 version/
+  954  nano /opt/lampp/etc/php.ini 
+  955  find / -name php_sqlsrv_55_ts
+  956  find / -name php_sqlsrv*
+  957  nano /opt/lampp/etc/php.ini 
+  958  /opt/lampp/lampp restart
+  959  /opt/lampp/lampp php5-sybase
+  960  /opt/lampp/lampp panel
+  961  /opt/lampp/lampp --panel
+  962  /opt/lampp/lampp -panel
+  963  /opt/lampp/lampp enablessl
+  964  cat /opt/lampp/etc/freetds.conf 
+  965  nano /opt/lampp/etc/php.ini
+  966  /opt/lampp/lampp restart
+  967  nano /opt/lampp/etc/freetds.conf
+  968  /opt/lampp/lampp restart
+  969  cat /opt/lampp/etc/freetds.conf
+  970  nano sqlserver
+  971  mkdir sqlserver
+  972  cd sqlserver/
+  973  nano index.php
+  974  cd ..
+  975  chmod -R 777 sqlserver/
+  976  nano sqlserver/index.php
+  977  cat /opt/lampp/etc/freetds.conf
+  978  gedit sqlserver/index.php
+  979  pkill gedit
+  980  gedit sqlserver/index.php
+  981  nano sqlserver/index.php
+  982  clear
+  983  ls
+  984  clear
+  985  ls
+  986  cd sqlserver/
+  987  clear
+  988  ls
+  989  nano index.php 
+  990  nano index.php
+  991  ./vnc
+  992  nano index.php
+  993  mv index.php indexBK.php
+  994  nano index.php
+  995  nano indexBK.php 
+  996  nano index.php
+  997  nano indexBK.php 
+  998  nano index.php
+  999  clear
+ 1000  shutdown -r now
+ 1001  /opt/lampp/lampp restart
+ 1002  ./vnc
+ 1003  /opt/lampp/lampp -panel
+ 1004  /opt/lampp/lampp panel
+ 1005  cd Descargas/
+ 1006  ls
+ 1007  cd ConectorjdbcSQLServer/
+ 1008  clear
+ 1009* find /
+ 1010  pwd
+ 1011  cd /home/oracle/Descargas/ConectorjdbcSQLServer/jtds-1.3.1-dist
+ 1012  ls
+ 1013  find /usr -name *.jar
+ 1014  cat README
+ 1015  find / -name *.jar
+ 1016  cd /opt
+ 1017  ls
+ 1018  find /opt/sqldeveloper/ -name *.jar
+ 1019  cp /home/oracle/Descargas/ConectorjdbcSQLServer/jtds-1.3.1-dist/jtds-1.3.1.jar /opt/sqldeveloper/ide/extensions/
+ 1020  yum install php5-sybase
+ 1021  find / -name *sybase
+ 1022  find /home/oracle *.so
+ 1023  find /home/oracle -name *.so
+ 1024  nano sqlserver/index.php
+ 1025  nano /opt/lampp/htdocs/sqlserver/index.php
+ 1026  cd /opt/lampp/htdocs/sqlserver/
+ 1027  ls
+ 1028  rm index.php -rf
+ 1029  mv indexBK.php index.php
+ 1030  nano index.php 
+ 1031  php -m | grep mssql
+ 1032  nano index.php 
+ 1033  yum install php5-mssql
+ 1034  find / -name mssql.so
+ 1035  find /opt/lampp -name mssql.so
+ 1036  find /opt/lampp -name php.ini
+ 1037  nano /opt/lampp/etc/php.ini
+ 1038  /opt/lampp/lampp restart
+ 1039  nano /opt/lampp/etc/php.ini
+ 1040  /opt/lampp/lampp restart
+ 1041  nano /opt/lampp/etc/php.ini
+ 1042  /opt/lampp/lampp restart
+ 1043  nano index.php 
+ 1044  grep ^extension /opt/lampp/etc/php.ini
+ 1045  nano /opt/lampp/etc/php.ini
+ 1046  grep ^extension /opt/lampp/etc/php.ini
+ 1047  nano /opt/lampp/etc/php.ini
+ 1048  grep ^extension /opt/lampp/etc/php.ini
+ 1049  nano /opt/lampp/etc/php.ini
+ 1050  grep ^extension /opt/lampp/etc/php.ini
+ 1051  /opt/lampp/lampp restart
+ 1052  grep ^extension /opt/lampp/etc/php.ini
+ 1053  nano /opt/lampp/etc/php.ini
+ 1054  phpize
+ 1055  ./configure
+ 1056  find /opt -name phpize
+ 1057  /opt/lampp/bin/phpize 
+ 1058  cd /opt/lampp/bin/phpize 
+ 1059  cd /opt/lampp/bin/
+ 1060  /opt/lampp/bin/phpize 
+ 1061  pwd 
+ 1062  phpize
+ 1063  cd ..
+ 1064  phpize
+ 1065  cd /usr/bin/phpize
+ 1066  cd /usr/bin/
+ 1067  phpize
+ 1068  clear
+ 1069  cd /opt/lampp/htdocs/
+ 1070  scp -r sqlserver/ root@10.1.150.1:/opt/lampp/htdocs
+ 1071  scp -r sqlserver/ root@10.1.150.80:/opt/lampp/htdocs
+ 1072  scp -r sqlserver/ root@10.2.150.1:/opt/lampp/htdocs
+ 1073  find / -name php5
+ 1074  find / -name php5 -t d
+ 1075  find / -name php5 -type d
+ 1076  find / -name mssql.so
+ 1077  find /opt/lampp -name mssql.so
+ 1078  cp /opt/lampp/lib/php/extensions/no-debug-non-zts-20131226/mssql.so /opt/lampp
+ 1079  cd ..
+ 1080  ls
+ 1081  /opt/lampp/lampp restart
+ 1082  find /opt -name phpize
+ 1083  cd /opt/lampp/bin/
+ 1084  phpize './configure' '--prefix=/opt/lampp' '--with-apxs2=/opt/lampp/bin/apxs' '--with-config-file-path=/opt/lampp/etc' '--with-mysql=mysqlnd' '--enable-inline-optimization' '--disable-debug' '--enable-bcmath' '--enable-calendar' '--enable-ctype' '--enable-ftp' '--enable-gd-native-ttf' '--enable-magic-quotes' '--enable-shmop' '--disable-sigchild' '--enable-sysvsem' '--enable-sysvshm' '--enable-wddx' '--with-gdbm=/opt/lampp' '--with-jpeg-dir=/opt/lampp' '--with-png-dir=/opt/lampp' '--with-freetype-dir=/opt/lampp' '--with-zlib=yes' '--with-zlib-dir=/opt/lampp' '--with-openssl=/opt/lampp' '--with-xsl=/opt/lampp' '--with-ldap=/opt/lampp' '--with-gd' '--with-imap=/bitnami/xamppunixinstallerstackDev-linux-x64/src/imap-2007e' '--with-imap-ssl' '--with-gettext=/opt/lampp' '--with-mssql=shared,/opt/lampp' '--with-pdo-dblib=shared,/opt/lampp' '--with-sybase-ct=/opt/lampp' '--with-mysql-sock=/opt/lampp/var/mysql/mysql.sock' '--with-oci8=shared,instantclient,/opt/lampp/lib/instantclient' '--with-mcrypt=/opt/lampp' '--with-mhash=/opt/lampp' '--enable-sockets' '--enable-mbstring=all' '--with-curl=/opt/lampp' '--enable-mbregex' '--enable-zend-multibyte' '--enable-exif' '--with-bz2=/opt/lampp' '--with-sqlite=shared,/opt/lampp' '--with-sqlite3=/opt/lampp' '--with-libxml-dir=/opt/lampp' '--enable-soap' '--with-xmlrpc' '--enable-pcntl' '--with-mysqli=mysqlnd' '--with-pgsql=shared,/opt/lampp/' '--with-iconv=/opt/lampp' '--with-pdo-mysql=mysqlnd' '--with-pdo-pgsql=/opt/lampp/postgresql' '--with-pdo-sqlite' '--with-icu-dir=/opt/lampp' '--enable-fileinfo' '--enable-phar' '--enable-zip' '--enable-intl' 'CC=gcc' 'CFLAGS=-I/opt/lampp/include/c-client '-I/opt/lampp/include/libpng' '-I/opt/lampp/include/freetype2' '-O3' '-fPIC' '-L/opt/lampp/lib' '-I/opt/lampp/include' '-I/opt/lampp/include/ncurses'' 'LDFLAGS=-Wl,--rpath '-Wl,/opt/lampp/lib' '-L/opt/lampp/lib' '-I/opt/lampp/include' '-L/opt/lampp/lib' '-L/opt/lampp'' 'CPPFLAGS=-I/opt/lampp/include/c-client '-I/opt/lampp/include/libpng' '-I/opt/lampp/include/freetype2' '-O3' '-fPIC' '-L/opt/lampp/lib' '-I/opt/lampp/include' '-I/opt/lampp/include/ncurses'' 'CXX=g++' 'CXXFLAGS=-I/opt/lampp/include/c-client '-I/opt/lampp/include/libpng' '-I/opt/lampp/include/freetype2' '-I/opt/lampp/include/ncurses' '-O3' '-L/opt/lampp/lib' '-I/opt/lampp/include'' 
+ 1085  cd ..
+ 1086  phpize './configure' '--prefix=/opt/lampp' '--with-apxs2=/opt/lampp/bin/apxs' '--with-config-file-path=/opt/lampp/etc' '--with-mysql=mysqlnd' '--enable-inline-optimization' '--disable-debug' '--enable-bcmath' '--enable-calendar' '--enable-ctype' '--enable-ftp' '--enable-gd-native-ttf' '--enable-magic-quotes' '--enable-shmop' '--disable-sigchild' '--enable-sysvsem' '--enable-sysvshm' '--enable-wddx' '--with-gdbm=/opt/lampp' '--with-jpeg-dir=/opt/lampp' '--with-png-dir=/opt/lampp' '--with-freetype-dir=/opt/lampp' '--with-zlib=yes' '--with-zlib-dir=/opt/lampp' '--with-openssl=/opt/lampp' '--with-xsl=/opt/lampp' '--with-ldap=/opt/lampp' '--with-gd' '--with-imap=/bitnami/xamppunixinstallerstackDev-linux-x64/src/imap-2007e' '--with-imap-ssl' '--with-gettext=/opt/lampp' '--with-mssql=shared,/opt/lampp' '--with-pdo-dblib=shared,/opt/lampp' '--with-sybase-ct=/opt/lampp' '--with-mysql-sock=/opt/lampp/var/mysql/mysql.sock' '--with-oci8=shared,instantclient,/opt/lampp/lib/instantclient' '--with-mcrypt=/opt/lampp' '--with-mhash=/opt/lampp' '--enable-sockets' '--enable-mbstring=all' '--with-curl=/opt/lampp' '--enable-mbregex' '--enable-zend-multibyte' '--enable-exif' '--with-bz2=/opt/lampp' '--with-sqlite=shared,/opt/lampp' '--with-sqlite3=/opt/lampp' '--with-libxml-dir=/opt/lampp' '--enable-soap' '--with-xmlrpc' '--enable-pcntl' '--with-mysqli=mysqlnd' '--with-pgsql=shared,/opt/lampp/' '--with-iconv=/opt/lampp' '--with-pdo-mysql=mysqlnd' '--with-pdo-pgsql=/opt/lampp/postgresql' '--with-pdo-sqlite' '--with-icu-dir=/opt/lampp' '--enable-fileinfo' '--enable-phar' '--enable-zip' '--enable-intl' 'CC=gcc' 'CFLAGS=-I/opt/lampp/include/c-client '-I/opt/lampp/include/libpng' '-I/opt/lampp/include/freetype2' '-O3' '-fPIC' '-L/opt/lampp/lib' '-I/opt/lampp/include' '-I/opt/lampp/include/ncurses'' 'LDFLAGS=-Wl,--rpath '-Wl,/opt/lampp/lib' '-L/opt/lampp/lib' '-I/opt/lampp/include' '-L/opt/lampp/lib' '-L/opt/lampp'' 'CPPFLAGS=-I/opt/lampp/include/c-client '-I/opt/lampp/include/libpng' '-I/opt/lampp/include/freetype2' '-O3' '-fPIC' '-L/opt/lampp/lib' '-I/opt/lampp/include' '-I/opt/lampp/include/ncurses'' 'CXX=g++' 'CXXFLAGS=-I/opt/lampp/include/c-client '-I/opt/lampp/include/libpng' '-I/opt/lampp/include/freetype2' '-I/opt/lampp/include/ncurses' '-O3' '-L/opt/lampp/lib' '-I/opt/lampp/include'' 
+ 1087  cd /usr/bin
+ 1088  phpize './configure' '--prefix=/opt/lampp' '--with-apxs2=/opt/lampp/bin/apxs' '--with-config-file-path=/opt/lampp/etc' '--with-mysql=mysqlnd' '--enable-inline-optimization' '--disable-debug' '--enable-bcmath' '--enable-calendar' '--enable-ctype' '--enable-ftp' '--enable-gd-native-ttf' '--enable-magic-quotes' '--enable-shmop' '--disable-sigchild' '--enable-sysvsem' '--enable-sysvshm' '--enable-wddx' '--with-gdbm=/opt/lampp' '--with-jpeg-dir=/opt/lampp' '--with-png-dir=/opt/lampp' '--with-freetype-dir=/opt/lampp' '--with-zlib=yes' '--with-zlib-dir=/opt/lampp' '--with-openssl=/opt/lampp' '--with-xsl=/opt/lampp' '--with-ldap=/opt/lampp' '--with-gd' '--with-imap=/bitnami/xamppunixinstallerstackDev-linux-x64/src/imap-2007e' '--with-imap-ssl' '--with-gettext=/opt/lampp' '--with-mssql=shared,/opt/lampp' '--with-pdo-dblib=shared,/opt/lampp' '--with-sybase-ct=/opt/lampp' '--with-mysql-sock=/opt/lampp/var/mysql/mysql.sock' '--with-oci8=shared,instantclient,/opt/lampp/lib/instantclient' '--with-mcrypt=/opt/lampp' '--with-mhash=/opt/lampp' '--enable-sockets' '--enable-mbstring=all' '--with-curl=/opt/lampp' '--enable-mbregex' '--enable-zend-multibyte' '--enable-exif' '--with-bz2=/opt/lampp' '--with-sqlite=shared,/opt/lampp' '--with-sqlite3=/opt/lampp' '--with-libxml-dir=/opt/lampp' '--enable-soap' '--with-xmlrpc' '--enable-pcntl' '--with-mysqli=mysqlnd' '--with-pgsql=shared,/opt/lampp/' '--with-iconv=/opt/lampp' '--with-pdo-mysql=mysqlnd' '--with-pdo-pgsql=/opt/lampp/postgresql' '--with-pdo-sqlite' '--with-icu-dir=/opt/lampp' '--enable-fileinfo' '--enable-phar' '--enable-zip' '--enable-intl' 'CC=gcc' 'CFLAGS=-I/opt/lampp/include/c-client '-I/opt/lampp/include/libpng' '-I/opt/lampp/include/freetype2' '-O3' '-fPIC' '-L/opt/lampp/lib' '-I/opt/lampp/include' '-I/opt/lampp/include/ncurses'' 'LDFLAGS=-Wl,--rpath '-Wl,/opt/lampp/lib' '-L/opt/lampp/lib' '-I/opt/lampp/include' '-L/opt/lampp/lib' '-L/opt/lampp'' 'CPPFLAGS=-I/opt/lampp/include/c-client '-I/opt/lampp/include/libpng' '-I/opt/lampp/include/freetype2' '-O3' '-fPIC' '-L/opt/lampp/lib' '-I/opt/lampp/include' '-I/opt/lampp/include/ncurses'' 'CXX=g++' 'CXXFLAGS=-I/opt/lampp/include/c-client '-I/opt/lampp/include/libpng' '-I/opt/lampp/include/freetype2' '-I/opt/lampp/include/ncurses' '-O3' '-L/opt/lampp/lib' '-I/opt/lampp/include'' 
+ 1089  cd /opt/lampp/bin/
+ 1090  cd ..
+ 1091  phpize './configure' '--prefix=/opt/lampp' '--with-apxs2=/opt/lampp/bin/apxs' '--with-config-file-path=/opt/lampp/etc' '--with-mysql=mysqlnd' '--enable-inline-optimization' '--disable-debug' '--enable-bcmath' '--enable-calendar' '--enable-ctype' '--enable-ftp' '--enable-gd-native-ttf' '--enable-magic-quotes' '--enable-shmop' '--disable-sigchild' '--enable-sysvsem' '--enable-sysvshm' '--enable-wddx' '--with-gdbm=/opt/lampp' '--with-jpeg-dir=/opt/lampp' '--with-png-dir=/opt/lampp' '--with-freetype-dir=/opt/lampp' '--with-zlib=yes' '--with-zlib-dir=/opt/lampp' '--with-openssl=/opt/lampp' '--with-xsl=/opt/lampp' '--with-ldap=/opt/lampp' '--with-gd' '--with-imap=/bitnami/xamppunixinstallerstackDev-linux-x64/src/imap-2007e' '--with-imap-ssl' '--with-gettext=/opt/lampp' '--with-mssql=shared,/opt/lampp' '--with-pdo-dblib=shared,/opt/lampp' '--with-sybase-ct=/opt/lampp' '--with-mysql-sock=/opt/lampp/var/mysql/mysql.sock' '--with-oci8=shared,instantclient,/opt/lampp/lib/instantclient' '--with-mcrypt=/opt/lampp' '--with-mhash=/opt/lampp' '--enable-sockets' '--enable-mbstring=all' '--with-curl=/opt/lampp' '--enable-mbregex' '--enable-zend-multibyte' '--enable-exif' '--with-bz2=/opt/lampp' '--with-sqlite=shared,/opt/lampp' '--with-sqlite3=/opt/lampp' '--with-libxml-dir=/opt/lampp' '--enable-soap' '--with-xmlrpc' '--enable-pcntl' '--with-mysqli=mysqlnd' '--with-pgsql=shared,/opt/lampp/' '--with-iconv=/opt/lampp' '--with-pdo-mysql=mysqlnd' '--with-pdo-pgsql=/opt/lampp/postgresql' '--with-pdo-sqlite' '--with-icu-dir=/opt/lampp' '--enable-fileinfo' '--enable-phar' '--enable-zip' '--enable-intl' 'CC=gcc' 'CFLAGS=-I/opt/lampp/include/c-client '-I/opt/lampp/include/libpng' '-I/opt/lampp/include/freetype2' '-O3' '-fPIC' '-L/opt/lampp/lib' '-I/opt/lampp/include' '-I/opt/lampp/include/ncurses'' 'LDFLAGS=-Wl,--rpath '-Wl,/opt/lampp/lib' '-L/opt/lampp/lib' '-I/opt/lampp/include' '-L/opt/lampp/lib' '-L/opt/lampp'' 'CPPFLAGS=-I/opt/lampp/include/c-client '-I/opt/lampp/include/libpng' '-I/opt/lampp/include/freetype2' '-O3' '-fPIC' '-L/opt/lampp/lib' '-I/opt/lampp/include' '-I/opt/lampp/include/ncurses'' 'CXX=g++' 'CXXFLAGS=-I/opt/lampp/include/c-client '-I/opt/lampp/include/libpng' '-I/opt/lampp/include/freetype2' '-I/opt/lampp/include/ncurses' '-O3' '-L/opt/lampp/lib' '-I/opt/lampp/include'' 
+ 1092  find / -name freetds
+ 1093  find /opt/lampp -name pecl
+ 1094  /opt/lampp/bin/pecl install freetds
+ 1095  /opt/lampp/bin/pecl install mssql
+ 1096  /opt/lampp/bin/pecl install sqlsrv
+ 1097  find /opt/lampp -name pecl
+ 1098  find / -name freetds
+ 1099  cd /home/oracle/Descargas/
+ 1100  clear
+ 1101  ls
+ 1102  ls *freetds* -ls
+ 1103  ls *freetds* -lath
+ 1104  ls *freet* -lath
+ 1105  clear
+ 1106  ls
+ 1107  mkdir /opt/freetds
+ 1108  tar -zxvf freetds-patched.tar.gz -C /opt/freetds/
+ 1109  cd /opt/freetds/
+ 1110  ls
+ 1111  cp -R freetds-1.00.15/* /opt/freetds/
+ 1112  rm freetds-1.00.15/ -rf
+ 1113  ls
+ 1114  cat README 
+ 1115  ls
+ 1116  ./configure
+ 1117  make
+ 1118  /opt/lampp/bin/pecl install dblib
+ 1119* /opt/lampp/bin/pecl install 
+ 1120  clear
+ 1121  ssh root@10.1.150.80
+ 1122  yum install freetds
+ 1123  phpize
+ 1124  phpize ./configure –with-mssql
+ 1125  /opt/lampp/bin/phpize ./configure –with-mssql
+ 1126  /opt/lampp/lampp restart
+ 1127  find /opt -name phpize
+ 1128  pwd
+ 1129  ls
+ 1130  /opt/lampp/bin/phpize ./configure -with-mssql
+ 1131  /opt/lampp/bin/phpize
+ 1132  /opt/lampp/bin/phpize ./configure -with-mssql
+ 1133  cd /opt/lampp/bin/
+ 1134  phpize /opt/freetds/configure --with-mssql
+ 1135  cd /opt/freetds/
+ 1136  /opt/lampp/bin/phpize ./configure -with-mssql
+ 1137  find /opt -name config.m4
+ 1138  /opt/lampp/bin/phpize
+ 1139  find /opt -name mssql
+ 1140  find / -name mssql
+ 1141  cd /opt/lampp/htdocs/clinicamobile
+ 1142  git init
+ 1143  git add
+ 1144  ls
+ 1145  git commit -m "primera version"
+ 1146  git remote add origin https://github.com/robyirloreto/clinicamobile.git
+ 1147  git push -u origin master
+ 1148* git pull origin master 
+ 1149  ls
+ 1150  git push -u origin master
+ 1151  cd /opt/freetds/
+ 1152  clear
+ 1153  ls
+ 1154  ./configure --with-tdsver
+ 1155  make
+ 1156  ./configure --with-tdsver=7.2
+ 1157  make
+ 1158  sudo make
+ 1159  cd ..
+ 1160  cd /home/oracle/Descargas/
+ 1161  cp -R smartgit/ /opt
+ 1162  cd /opt/smartgit/
+ 1163  clear
+ 1164  ls
+ 1165  cd smartgit/
+ 1166  ls
+ 1167  cd bin/
+ 1168  ls
+ 1169  chmod a+x smartgit.sh
+ 1170  ./smartgit
+ 1171  sh smartgit.sh 
+ 1172  yum remove git
+ 1173  yum update
+ 1174  yum remove chrome
+ 1175  yum remove google-chrome
+ 1176  yum install git
+ 1177  cd /opt/lampp/htdocs/clinicamobile
+ 1178  clear
+ 1179  git config --global user.name "robyirloreto@gmail.com"
+ 1180  git config --global user.email "robyirloreto@gmail.com"
+ 1181  git init
+ 1182  git remote add origin https://github.com/robyirloreto/clinicamobile.git
+ 1183  git remote -v
+ 1184  cd grit
+ 1185  clear
+ 1186  git push origin master
+ 1187  git config --global user.name "robyirloreto"
+ 1188  git config --global user.email "robyirloreto@gmail.com"
+ 1189  git init
+ 1190  git push origin master
+ 1191* git reset --mixed origin/master > git add
+ 1192  git reset --mixed origin/master 
+ 1193  clear
+ 1194  git reset --mixed origin/master > git add . > git commit -m "This is a new commit for what I originally planned to be an amendmend" > git push origin master
+ 1195  git push origin master
+ 1196  ls
+ 1197   git reset --mixed origin/master 
+ 1198  git reset --mixed origin/master 
+ 1199  ls
+ 1200  git status
+ 1201  clear
+ 1202  git status
+ 1203  git add *
+ 1204  git commit origin master
+ 1205  ls
+ 1206  echo "Proyecto Clinicamobile"> README
+ 1207  cat README 
+ 1208  clear
+ 1209  git add README
+ 1210  git status
+ 1211  git checkout README
+ 1212  git status
+ 1213  git add README
+ 1214  git commit
+ 1215  git commit "Primera version de clinicamobile"
+ 1216  git commit
+ 1217  clear
+ 1218  git status
+ 1219  ls
+ 1220  reset
+ 1221  git status
+ 1222  git commit -m "primera version de clinicamobile sin boton salir"
+ 1223  git push
+ 1224  git commit -m "primera version de clinicamobile sin boton salir"
+ 1225  ls
+ 1226  git status
+ 1227  git add .
+ 1228  git status
+ 1229  clear
+ 1230  git status
+ 1231  git commit
+ 1232  git commit -a
+ 1233  clear
+ 1234  ls
+ 1235  git status
+ 1236  git add .
+ 1237  git commit -m "segunda version comenzando con el boton salir"
+ 1238  git push
+ 1239  git log -10 --pretty="%H"
+ 1240  git reset --hard afa0daf901f99579b5e4a253f5df805110b0ea8a
+ 1241  git push --force
+ 1242  git status
+ 1243  history >comandos.txt
