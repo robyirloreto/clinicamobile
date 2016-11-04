@@ -75,7 +75,7 @@ $('#frmlog').submit(function(){
 		   setCookie("clinica",respuesta.clinica);
 		   setCookie("login",respuesta.login);
 
-           var cabecerageneral="<a href='#' data-rel='back'>Atras</a><center><h3>O24 "+getCookie('clinica')+"</h3></center>Usuario: "+getCookie('nombres')+"<br/> Grupo: "+getCookie('grupo')+"<a href='#' onclick='cerrarSesion();'>Salir</a>";
+           var cabecerageneral="<a href='#' data-rel='back'>Atras</a><center><h3>O24 "+getCookie('clinica')+"</h3></center>Usuario: "+getCookie('nombres')+"<br/> Grupo: "+getCookie('grupo')+"<a href='#' class='exit'>Salir</a>";
             
             
              $('#cabeceramenu').html(cabecerageneral);
@@ -1004,7 +1004,9 @@ function getCookie(cname) {
     return $.cookie(cadena);
 }
 
- 
+ function borrarCookie(cname) {
+         $.cookie(cname, null, { path: '/' });
+        }
 
 function cerrarSesion(){
   borrarCookie("id"); 
@@ -1013,12 +1015,16 @@ function cerrarSesion(){
   borrarCookie("clinica");
   borrarCookie("grupo"); 
   borrarCookie("login"); 
-  $.mobile.changePage("#main");
+
+  navigator.app.exitApp();
+  //$.mobile.changePage("#main");
 
 }
-function borrarCookie(cname) {
-            $.cookie(cname, "", -1);
-        }
+ 
+
+ $(document).on('click', '.exit', function () {
+             cerrarSesion();
+           });
  
 
  
